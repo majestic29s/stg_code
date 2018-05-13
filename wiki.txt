@@ -34,3 +34,10 @@ git commit -am "Add commit"
 ■リモートリポジトリへの送信
 git push -u origin master
 
+■リモートリポジトリから情報取得
+git pull
+
+■ブランチ情報を取得(github上も含む)
+git buranch -a
+
+
