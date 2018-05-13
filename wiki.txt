@@ -27,3 +27,10 @@ git log
 
 ■githubのリポジトリへ登録
 git push
+
+■add commint同時実行
+git commit -am "Add commit"
+
+■リモートリポジトリへの送信
+git push -u origin master
+
