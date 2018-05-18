@@ -34,3 +34,13 @@ git commit -am "Add commit"
 ■リモートリポジトリへの送信
 git push -u origin master
 
+■リモートリポジトリから情報取得
+git pull
+
+■ブランチ情報を取得(github上も含む)
+git buranch -a
+
+■ブランチの差分を確認
+https://github.com/majestic29s/stg_code/compare/master@%7B7.day.ago...master%7D
+
+eixt
