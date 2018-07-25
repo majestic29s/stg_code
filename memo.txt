@@ -1,0 +1,46 @@
+            for m in re.finditer(r'<span class="txt_b05">(.+?)</span></td>', browser.page_source, re.UNICODE):
+                price = m.groups()[0]
+
+
+                    for m in re.finditer(r'(..?) &nbsp;(.+?)<br>', browser.page_source, re.UNICODE):
+                        self.empty_dict[m.groups()[0]] = m.groups()[1].replace("&nbsp;", "").replace(",", "")
+
+
+
+for m in re.finditer(r'<span class="txt_01_1">“ŒØ(:|&nbsp;:&nbsp;)(.+?)Š”</span></td>', browser.page_source, re.UNICODE):
+                    amount = m.groups()[1]
+
+
+    for m in re.finditer(r'[red|3563FF]">([”„|”ƒ])</font>(.+?)–œ@', browser.page_source, re.UNICODE):
+        side.append(m.groups()[0])
+        amount.append(m.groups()[1])
+
+
+
+
+
+    def work4(self,UURL):
+#        browser = webdriver.PhantomJS()
+#        browser.get(UURL)
+#        res = browser.page_source
+#        res = common.Chorme_get(UURL)
+#        common.create_file("margin.txt", res)
+#        res.to_csv("TEST.CSV")
+#        dfs = pd.read_html(res, 0)  # header=0,skiprows=0(È—ª‰Â”\)
+        dfs = pd.read_html(common.Chorme_get(UURL), header=0)
+
+        for ii in range(len(dfs)):
+            print("~~~~", ii, dfs[ii].columns[0])
+            if dfs[ii].columns[0] == "M—pc‚Ì„ˆÚ":  # æ•¨EèŒûî•ñ
+                num = ii + 1
+                break
+        common.create_file("transition.txt", common.Chorme_get(UURL))
+        dfs[num].to_csv("transition.CSV")
+
+if __name__ == '__main__':
+    info = a01_all_info()
+#    info.work3()  # C³•K—v TŸ‘Î‰#www.traders.co.jp
+#    UURL = "https://www.traders.co.jp/domestic_stocks/invest_tool/futures/futures_top.asp"
+    UURL = "https://www.traders.co.jp/margin/transition/transition.asp"
+    info.work4(UURL)
+

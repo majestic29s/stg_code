@@ -1,0 +1,2356 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta name="keywords" content="日本株,IPO,信用取引,先物,米国株,中国株,FX,為替,株式情報,ニュース,トレーダーズ,プレミアム,トレーダーズ・ウェブ,トレーダーズ・プレミアム" />
+<meta name="description" content="トレーダーズ・ウェブは、株式・ＦＸ情報を配信する総合投資情報サイトです。株式ニュース、ＦＸニュース、中国株ニュース、株価、チャート、経済指標はもちろん、レーティング、話題の銘柄、225先物手口、ＩＰＯ情報といった人気の株式情報も無料で提供しています。" />
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>先物・手口情報:投資ツール - トレーダーズ・ウェブ(株式情報、ＦＸ情報)</title>
+<link rel="stylesheet" href="/css/header.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/sidemenu.css?v=1.1" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/footer.css?v=1.1" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen" />
+<script src="https://pagead2.googlesyndication.com/pagead/js/r20180723/r20180604/osd.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://pagead2.googlesyndication.com/pub-config/r20160913/ca-pub-1231648855741743.js"></script><script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/RSMenuChange.js"></script>
+<style type="text/css">
+body,th,td{
+	font-size:13px;
+}
+h1 { 
+	margin:0px;
+	font-size:19px;
+}
+h2 {
+	margin:0px;
+	font-size:17px;
+}
+h3 {
+	margin:0px;
+	font-size:15px;
+}
+h4 {
+	margin:0px;
+	font-size:13px;
+}
+h5 {
+	margin:0px;
+	font-size:11px;
+}
+h6 {
+	margin:0px;
+	font-size:9px;
+}
+
+/*
+body{
+	margin:5px;
+}
+*/
+
+</style>
+<script src="/js/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="/js/AC_ActiveX.js" type="text/javascript"></script>
+<link rel="preload" href="https://adservice.google.co.jp/adsid/integrator.js?domain=www.traders.co.jp" as="script" /><script type="text/javascript" src="https://adservice.google.co.jp/adsid/integrator.js?domain=www.traders.co.jp"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.traders.co.jp" as="script" /><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.traders.co.jp"></script></head>
+<body>
+
+<div id="wrapper">
+
+
+	<!-- ヘッダー_START -->
+	<div>
+	<script language="JavaScript">
+&lt;!--
+function stock_search()
+{
+	txt = document.myFORM.S_SC.value;
+
+	if (txt == "") {
+		alert("テキストボックスに入力して下さい");
+		return;
+	}
+	
+	document.all.item("S_SC").value = txt;
+	document.myFORM.submit();
+	
+}
+
+var arFlMenu = new Array(5);
+arFlMenu[0] = "fm_domestic";
+arFlMenu[1] = "fm_foreign";
+arFlMenu[2] = "fm_ipo";
+arFlMenu[3] = "fm_margin";
+arFlMenu[4] = "fm_economic";
+arFlMenu[5] = "fm_tool";
+arFlMenu[6] = "fm_user";
+//arFlMenu[7] = "fm_china";
+//arFlMenu[8] = "fm_fx";
+//arFlMenu[9] = "fm_etf";
+
+function dispSubMenu(myID,posX,posY)
+{
+	var i;
+	for (i = 0; i &lt; arFlMenu.length; i++)
+	{
+		if (arFlMenu[i] != myID)
+		{
+			hideSubMenu(arFlMenu[i]);
+		}
+	}
+	if (myID == "")
+	{
+		return;
+	}
+	
+	myOP = (navigator.userAgent.indexOf("Opera",0) != -1)?1:0; //OP
+	myN6 = document.getElementById;  // N6 or IE
+	myIE = document.all;             // IE
+	myN4 = document.layers;          // N4
+	myObj = "";
+	myX = 0;            // カーソル先端から少しずらす(X座標)
+    myY = 0;           // カーソル先端から少しずらす(Y座標)
+	if (myOP) // OP
+	{
+		myObj=document.getElementById(myID).style;
+		myObj.style.left = posX + "px";
+		myObj.style.top  = posY + "px";
+	}
+	else if (myIE) // IE
+	{
+		
+		myObj=document.all[myID];
+		myObj.style.left = posX + "px";
+		myObj.style.top  = posY + "px";
+	}
+	else if (myN6) // N6
+	{
+		myObj=document.getElementById(myID);
+		myObj.style.left = posX + "px";
+		myObj.style.top  = posY + "px";
+	}
+	else if (myN4) // N4
+	{
+		myObj=document[myID];
+		myObj.left = posX ;
+		myObj.top  = posY ;
+   	}
+
+    if (myObj != "")
+    {
+        myObj.style.visibility = "visible";
+    }
+}
+
+function hideSubMenu(myID)
+{
+    myN6 = document.getElementById; // ブラウザ(N6)のチェック用
+    myIE = document.all;            // ブラウザ(IE)のチェック用
+    myN4 = document.layers;         // ブラウザ(N4)のチェック用
+    myObj = "";                     // ブラウザオブジェクト退避用
+    if (myIE)
+    {
+        myObj = document.all[myID];
+    }else if (myN6){
+        myObj=document.getElementById(myID);
+    }else if (myN4){
+        myObj = document[myID];
+    }
+    
+    if (myObj != "")
+    {
+        myObj.style.visibility = "hidden";
+    }
+}
+
+function dispVoiceMenu(posX,posY)
+{
+	myID = 'fm_voice'
+	myOP = (navigator.userAgent.indexOf("Opera",0) != -1)?1:0; //OP
+	myN6 = document.getElementById;  // N6 or IE
+	myIE = document.all;             // IE
+	myN4 = document.layers;          // N4
+	myObj = "";
+	myX = 0;            // カーソル先端から少しずらす(X座標)
+    myY = 0;           // カーソル先端から少しずらす(Y座標)
+	if (myOP) // OP
+	{
+		myObj=document.getElementById(myID).style;
+		myObj.style.left = posX + "px";
+		myObj.style.top  = posY + "px";
+	}
+	else if (myIE) // IE
+	{
+		
+		myObj=document.all[myID];
+		myObj.style.left = posX + "px";
+		myObj.style.top  = posY + "px";
+	}
+	else if (myN6) // N6
+	{
+		myObj=document.getElementById(myID);
+		myObj.style.left = posX + "px";
+		myObj.style.top  = posY + "px";
+	}
+	else if (myN4) // N4
+	{
+		myObj=document[myID];
+		myObj.left = posX ;
+		myObj.top  = posY ;
+   	}
+
+		if (myObj != "")
+	{
+		if (myObj.style.visibility == "visible")
+		{
+			myObj.style.visibility = "hidden";
+		}
+		else
+		{
+			myObj.style.visibility = "visible";
+		}
+	}
+
+	// 閲覧中のコンテンツ名をセット
+	setPageTitle();
+}
+
+function setPageTitle()
+{
+	var strTitle = document.title;
+	if(strTitle == "トレーダーズ・ウェブ(株式情報、ＦＸ情報) - 株式投資やＦＸ投資に役立つ情報満載！")
+	{
+		strTitle = "トップページ:ホーム";
+	}
+	else
+	{
+		if(strTitle == "ニュース - トレーダーズ・ウェブ(株式情報、ＦＸ情報)")
+		{
+			strTitle = "ニュース:ニュース";
+		}
+		else if(strTitle.indexOf("個別銘柄情報") &gt; 0)
+		{
+			strTitle = "個別銘柄情報:日本株";
+		}
+		else
+		{
+			strTitle = strTitle.replace(" - ", "");
+			strTitle = strTitle.replace("トレーダーズ・ウェブ(株式情報、ＦＸ情報)", "");
+			strTitle = strTitle.replace("トレーダーズ・ウェブ(株式情報、FX情報)", "");
+		}
+	}
+	if(strTitle != "")
+	{
+		document.getElementById("CNT_NAME").value = strTitle;
+	}
+}
+
+function initvoice(obj)
+{
+	if(obj.value == "ご意見・ご要望など、250文字以内でこちらにお書きください。")
+	{
+		obj.value = "";
+		obj.style.color = "#000000";
+	}
+}
+
+function checkvoice(obj)
+{
+	var AGE;
+	var SEX;
+	var CNT;
+	var TXT;
+
+	if(obj.innerHTML == "確認")
+	{
+		// 年齢チェック
+		AGE = document.FrmVoice.USR_AGE.value;
+		if(AGE.match(/[^0-9]/g) || AGE == "") {
+			alert("年齢を半角数字で入力してください。");
+			return false;
+		}
+		else
+		{
+			if(AGE.match(/0[0-9]/g)) {
+				AGE = AGE - 0;
+				document.FrmVoice.USR_AGE.value = AGE;
+			}
+		}
+		AGE +=  "歳";
+
+		// 性別チェック
+		if(document.FrmVoice.USR_SEX.length) {
+			for (i = 0; i &lt; document.FrmVoice.USR_SEX.length; i++) {
+				if (document.FrmVoice.USR_SEX[i].checked) {
+					SEX = document.FrmVoice.USR_SEX[i].value;
+					document.FrmVoice.VOICE_SEX.value = SEX;
+				}
+			}
+		}
+		if(SEX != "男性" &amp;&amp; SEX != "女性")	{
+			alert("性別を選択してください。");
+			return false;
+		}
+
+		// コンテンツ
+		CNT = myEscape(document.FrmVoice.CNT_NAME.value);
+		document.FrmVoice.CNT_NAME.value = CNT;
+
+		// コメント
+		TXT = myEscape(document.getElementById("voice_cmnt").value);
+		if(TXT.length &gt; 250) {
+			alert("ご意見・ご要望は、250文字以内でお書きください。");
+			return false;
+		}
+		TXT = brEscape(TXT);
+		document.FrmVoice.VOICE_HDN.value = TXT;
+
+		// 確認画面に切り替え
+		obj.innerHTML = "送信";
+		document.getElementById("conf_age").innerHTML = "年齢 ： " + AGE;
+		document.getElementById("conf_sex").innerHTML = "性別 ： " + SEX;
+		document.getElementById("conf_cnt").innerHTML = "ご覧のコンテンツ 「" + CNT + "」";
+		document.getElementById("conf_txt").innerHTML = TXT;
+		document.getElementById("voice_head").style.display = "none";
+		document.getElementById("voice_main").style.display = "none";
+		document.getElementById("voice_text").style.display = "none";
+		document.getElementById("voice_cnfm").style.display = "block";
+		return false;
+
+	}
+	else if(obj.innerHTML == "送信")
+	{
+		// XMLHttpRequest
+		XMLHttp(document.FrmVoice);
+
+		// 送信画面に切り替え
+		obj.innerHTML = "閉じる";
+		document.getElementById("voice_cnfm").style.display = "none";
+		return false;
+
+	}
+	else if(obj.innerHTML == "閉じる")
+	{
+		document.getElementById("fm_voice").style.visibility = "hidden";
+	}
+}
+
+function XMLHttp(form)
+{
+	var xmlhttp = false;
+	// IE
+	if(typeof ActiveXObject != "undefined"){
+		try {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			document.charset='UTF-8';
+		} catch (e) {
+			xmlhttp = false;
+		}
+	}
+	// nonIE
+	if(!xmlhttp &amp;&amp; typeof XMLHttpRequest != "undefined") {
+		try {
+			xmlhttp = new XMLHttpRequest();
+			document.characterset='UTF-8';
+		} catch(e) {
+			xmlhttp = false;
+		}
+	}
+	xmlhttp.onreadystatechange = function() {
+		//読み込み終わったら処理を行う
+		if (xmlhttp.readyState == 4 &amp;&amp; xmlhttp.status == 200) {
+			var disp = document.getElementById('result_disp');
+			document.getElementById('voice_rslt').style.display = "block";
+			document.charset='SHIFT-JIS';
+			if(xmlhttp.responseText == "Done")
+			{
+				disp.innerHTML = "貴重なご意見ありがとうございました。&lt;br /&gt;これからもトレーダーズ・ウェブをよろしくお願いいたします。";
+			}
+			else
+			{
+				disp.innerHTML = "データが正常に送信できませんでした。&lt;br /&gt;お手数ですが、ブラウザの「更新」ボタンかキーボードの「Ｆ5」を押下してページを再読み込みしたあと、再度お手続き下さい。";
+			}
+		}
+	}
+	xmlhttp.open('POST', '/service/support/insert_opinion.asp', true);
+	xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xmlhttp.send(getFormData(form));
+
+	return false;
+}
+
+function getFormData(form)
+{
+	var value = '';
+	for(var i = 0; i &lt; form.elements.length; i++) {
+		value += ('&amp;' + form.elements[i].name + '=' + form.elements[i].value);
+	}
+	return value.substring(1);
+}
+
+function myEscape(str)
+{
+	var retStr = "";
+	retStr = str;
+	retStr = retStr.replace(/\"/g, '”');
+	retStr = retStr.replace(/\'/g, "’");
+	retStr = retStr.replace(/\%/g, "％");
+	retStr = retStr.replace(/\\/g, "￥");
+	retStr = retStr.replace(/\;/g, "；");
+	retStr = retStr.replace(/\&amp;/g, "＆");
+	retStr = retStr.replace(/\?/g, "？");
+	retStr = retStr.replace(/\$/g, "＄");
+	retStr = retStr.replace(/\!/g, "！");
+	retStr = retStr.replace(/\(/g, "（");
+	retStr = retStr.replace(/\)/g, "）");
+	retStr = retStr.replace(/\{/g, "｛");
+	retStr = retStr.replace(/\}/g, "｝");
+	retStr = retStr.replace(/\&lt;/g, "＜");
+	retStr = retStr.replace(/\&gt;/g, "＞");
+	retStr = retStr.replace(/\r\n/g, "\r");
+	return retStr;
+}
+
+function brEscape(str)
+{
+	var retStr = "";
+	retStr = str;
+	retStr = retStr.replace(/\r\n/g, "&lt;br&gt;");
+	retStr = retStr.replace(/\n/g, "&lt;br&gt;");
+	retStr = retStr.replace(/\r/g, "&lt;br&gt;");
+	return retStr;
+}
+//--&gt;
+</script>
+
+
+<style type="text/css">
+body {
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo","ＭＳ Ｐゴシック",sans-serif;
+}
+
+#main_header {
+	background-color:#FFFFFF;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo","ＭＳ Ｐゴシック",sans-serif;
+
+}
+
+#main_header button {
+	cursor: pointer;
+    height: 24px;
+}
+
+#main_wrapper {
+	
+}
+
+table.floatmenue_fr
+{
+	visibility:hidden;
+	position:absolute;
+	z-index:99;
+}
+
+
+table.floatmenue_fr2
+{
+	visibility:hidden;
+	position:absolute;
+	z-index:99;
+}
+
+.floatmenue_fr th
+{
+	background-color:#123c69;
+	color:#ffffff;
+	text-align:left;
+	padding:3px 0px 0px 7px;
+	font-size:13px;
+}
+
+table.floatmenue_confr
+{
+	padding:20px;
+	border:solid 3px #123c69;
+	background-color:#f3f6fb;
+}
+
+.floatmenue_confr2
+{
+	border:solid 3px #b21c22;
+	background-color:#ffffff;
+}
+
+.floatmenue_confr3
+{
+	border:solid 3px #0D315D;
+	background-color:#ffffff;
+}
+.floatmenue_confr3 table tr td
+{
+	font-size:12px;
+	letter-spacing:1px;
+	line-height:120%;
+}
+
+td.floatmenue_confr2 
+{
+	padding:10px;
+
+}
+
+.floatmenue_confr td.confr_center
+{
+	vertical-align:top;
+	padding:5px 5px 5px 5px;
+}
+
+.floatmenue_confr td.confr_right
+{
+	vertical-align:top;
+	padding:5px 5px 5px 0px;
+}
+
+.floatmenue_confr td.confr_left
+{
+	vertical-align:top;
+	padding:5px 0px 5px 5px;
+}
+
+table.floatmenue_contents
+{
+	width:100%;
+	padding:5px;
+	font-size:12px;
+}
+
+.floatmenue_contents th
+{
+	color:#ffffff;
+	text-align:left;
+	font-size:12px;
+	background-color: #0F3E76;
+	padding:4px 0px 2px 6px;;
+}
+
+.menu_th
+{
+	padding:0px;
+}
+
+.floatmenue_contents td,a.floatmenuelink:link,a.floatmenuelink:visited,a.floatmenuelink:hover,a.floatmenuelink:active
+{
+	text-align:left;
+	padding:2px 2px 2px 5px;
+	font-size:12px;
+	vertical-align:middle;
+}
+
+
+.floatmenue_th2{
+	vertical-align:-20%;
+}
+
+
+#headerbannerbase
+{
+	height:108px;
+	position:relative;
+}
+
+#headerbannerbase:after
+{
+	clear:both;
+}
+
+#headerlogo
+{
+	position:absolute;
+	top: 24px;
+	left: 9px;
+	z-index:1;
+}
+
+
+
+#headerbanner_type1
+{
+	position:absolute;
+	top:10px;
+	left:288px;
+	width:728px;
+	height:90px;
+	z-index:2;
+}
+
+#headerbanner_type2
+{
+	position:absolute;
+	top:10px;
+	left:288px;
+	width:728px;
+	height:90px;
+	z-index:2;
+	background-color:#ff0000;
+}
+
+
+/*メニュー影用追加CSS*/
+.floatmenue_fr
+{
+	visibility:hidden;
+	position:absolute;
+	z-index:99;
+}
+
+.floatmenue_fr_midashi
+{
+	background-color:#123c69;
+	color:#ffffff;
+	text-align:left;
+	padding:3px 0px 0px 7px;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	padding-bottom:2px;
+}
+
+.floatmenue_confr_s
+{
+	/*padding:20px;*/
+	border:solid 3px #123c69;
+	background-color:#f3f6fb;
+	/*width:100%;*/
+}
+
+
+.floatmenue_confr_s .confr_center
+{
+	vertical-align:top;
+	padding:5px 5px 5px 5px;
+}
+
+
+.floatmenue_confr_s .confr_right
+{
+	vertical-align:top;
+	padding:5px 5px 5px 0px;
+}
+
+
+.floatmenue_confr_s .confr_left
+{
+	vertical-align:top;
+	padding:5px 0px 5px 5px;
+}
+
+.floatmenue_contents_midashi
+{
+	background-color:#4d6699;
+	color:#ffffff;
+	text-align:left;
+	padding:2px;
+	font-size:12px;
+}
+
+#voice_cmnt
+{
+	padding:6px;
+	width:360px;
+	background-color:#FEFEE5;
+	border-color:#C0C0C0;
+	color:#969696;
+	font-size:12px;
+	overflow:auto;
+	resize:none;
+}
+
+.tablewaku {
+  
+}
+
+div.tablewaku:after {
+  content : "";
+  display : block;
+  height : 0;
+  clear : both;
+}
+</style>
+<style type="text/css">
+.shadow {float:left;}
+.frame {position:relative; background:#fff; display:block;
+-moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+.clear {clear:left;}
+
+.button_row td {
+	text-align:center;
+	border:1px solid #999999;
+	width:76px;
+	height:36px;
+	font-weight:bold;
+	cursor:pointer;
+	color:#FFFFFF;
+}
+
+.button_row a:link, .button_row a:visited, .button_row a:hover {
+	color:#FFFFFF;
+	text-decoration:none;
+	font-size:11pt;
+}
+
+.button_row div {
+	padding: 6px 0px;
+}
+
+.menu_button {
+	background-color:#123F6E;
+	color:#FFFFFF;
+}
+
+.menu_button_active, .menu_button_premium_active {
+	background-color: #FFFFFF;
+	color: #444444;
+	border-bottom:1px solid #EFEFEF !important;
+}
+
+.menu_button_active a:link, .menu_button_active a:visited, .menu_button_active a:hover {
+	color: #444444;
+}
+
+.menu_button_premium_active a:link, .menu_button_premium_active a:visited, .menu_button_premium_active a:hover {
+	color: #444444;
+}
+
+.menu_button_login {
+	width: 66px !important;
+	background-color:#C00000;
+}
+
+.menu_button_premium, .menu_button_premium_active {
+	width:86px !important;
+}
+
+.menu_button_premium {
+	background-color: #C00000;
+}
+
+.menu_button:hover { 
+	background-color:#1a60b6;
+}
+
+.menu_button_premium:hover { 
+	background-color: #db0700;
+}
+
+.menu_button_login:hover { 
+	background-color:#d81212;
+}
+
+</style>
+
+<!--[if IE]>
+<style type="text/css">
+.frame {left:4px; top:-2px;}
+.shadow {background:#000; margin:-3px -3px; filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5', MakeShadow='true', ShadowOpacity='0.60');}
+</style>
+<![endif]-->
+
+<a name="page_top"></a>
+<div class="header_wrapper">
+<div id="main_header">
+	<!-- グローバルメニュー_START -->
+	<table width="1024px" border="0" cellpadding="0" cellspacing="0" style="display:none;">
+		<tbody><tr>
+			<td>
+				<img src="/img/globalmenu/header_logo.png" width="244" height="28" border="0" alt="DZHフィナンシャルリサーチ" /></td>
+			<td>
+				<img src="/img/globalmenu/header_web_hit.png" width="82" height="28" border="0" alt="総合サイト" /></td>
+			<td>
+				<a href="/naviindex.asp?mode=china"><img src="/img/globalmenu/header_tl.png" width="139" height="28" border="0" onmouseover="this .src='/img/globalmenu/header_tl_over.png'" onmouseout="this .src='/img/globalmenu/header_tl.png'" alt="中国株専門サイト" /></a></td>
+			<td>
+				<a href="https://www.traderswebfx.jp"><img src="/img/globalmenu/header_fx.png" width="126" height="28" border="0" onmouseover="this .src='/img/globalmenu/header_fx_over.png'" onmouseout="this .src='/img/globalmenu/header_fx.png'" alt="外国為替専門サイト" /></a></td>
+			<td>
+				<img src="/img/globalmenu/spc.png" width="433" height="28" border="0" /></td>
+		</tr>
+	</tbody></table>
+	<!-- グローバルメニュー_END -->
+
+	<!-- メニュー_START -->
+	<table border="0" cellpadding="0" cellspacing="0" style="width:1024px;margin-bottom:0px;">
+		<!-- ロゴ・広告配置 -->
+		<tbody><tr>
+			<td colspan="12" style="background-color:#123F6E;">
+			
+				<div id="headerbannerbase">
+				<div id="headerlogo">
+					<a href="/index.asp">
+						<img src="/header/img/header.png" />
+					</a>
+				</div>
+
+				<div id="headerbanner_type1" style="display:block;">
+					<script type="text/javascript">&lt;!--
+					google_ad_client = "pub-1231648855741743";
+					/* 総合サイトヘッダ用（728x90） */
+					google_ad_slot = "4859134242";
+					google_ad_width = 728;
+					google_ad_height = 90;
+
+					google_ad_region="traders"
+
+					//--&gt;
+					</script>
+					<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:624px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:624px;background-color:transparent;"><iframe width="624" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:624px;height:90px;"></iframe></ins></ins>
+				</div>
+
+
+
+				</div>
+			</td>
+		</tr>
+		<!-- メニュー一覧 -->
+		<tr class="button_row">
+
+
+			<td class="menu_button">
+				<a href="/"><div>ホーム</div></a>
+			</td>
+
+			<td class="menu_button">
+				<a href="/news/news_top.asp"><div>ニュース</div></a>
+			</td>
+
+			<td class="menu_button" onmouseover="dispSubMenu('fm_domestic', 167, 145);" onmouseout="hideSubMenu('fm_domestic');">
+				<a href="/domestic_stocks/domestic_stocks_top.asp"><div>日本株</div></a>
+			</td>
+
+			<td class="menu_button" onmouseover="dispSubMenu('fm_ipo', 251, 145);" onmouseout="hideSubMenu('fm_ipo');">
+				<a href="/ipo_info/ipo_info_top.asp"><div>IPO</div></a>
+			</td>
+
+			<td class="menu_button" onmouseover="dispSubMenu('fm_margin', 337, 145);" onmouseout="hideSubMenu('fm_margin');">
+				<a href="/margin/margin_top.asp"><div>信用取引</div></a>
+			</td>
+
+			<td class="menu_button_active">
+				<a href="/domestic_stocks/invest_tool/tool_top.asp"><div>投資ツール</div></a>
+			</td>
+
+			<td class="menu_button" onmouseover="dispSubMenu('fm_foreign', 507, 145);" onmouseout="hideSubMenu('fm_foreign');">
+				<a href="/foreign_stocks/foreign_stocks_top.asp"><div>米国株</div></a>
+			</td>
+
+			<td class="menu_button" title="中国株情報サイトを別ウィンドウで表示します">
+				<a href="https://www.nikihou.jp" target="_blank">
+					<div>
+						中国株
+						<img src="/images/icn/otherwindow.png" />
+					</div>
+				</a>
+			</td>
+
+			<td class="menu_button" title="為替情報サイトを別ウィンドウで表示します">
+				<a href="https://www.traderswebfx.jp" target="_blank">
+					<div>
+						外国為替
+						<img src="/images/icn/otherwindow.png" />
+					</div>
+				</a>
+			</td>
+
+			<td class="menu_button" onmouseover="dispSubMenu('fm_economic', 760, 145);" onmouseout="hideSubMenu('fm_economic');">
+				<a href="/economic_data/economic_data_top.asp"><div>経済データ</div></a>
+			</td>
+			<td class="menu_button_premium" onmouseover="dispSubMenu('fm_user', 843, 145);" onmouseout="hideSubMenu('fm_user');">
+				<a href="/service/premium/intro/info.asp"><div>会員サービス</div></a>
+			</td>
+			<td class="menu_button_login">
+				<a href="https://premiumplus.traders.co.jp"><div>ログイン</div></a>
+			</td>			
+		</tr>
+		<!-- 検索窓 -->
+
+		<tr>
+			<td colspan="13" style="width:1024px;height:33px;border-bottom:3px solid #efefef;padding:0px 10px 0px 5px;" valign="middle">
+				<table style="width:100%" border="0">
+					<tbody><tr>
+						<td>
+						
+<!--
+<a href="/seminar/entry.asp" onClick="window.open('/seminar/entry.asp');return false;">
+	<img src="/seminar/img/seminar_v_small.gif?v=20180608" style="margin-top:2px;" alt="無料セミナー">
+</a>
+-->
+
+						<div style="width:349px;float:right;padding:0 0 0 auto;z-index:5;">
+						<form method="post" name="myFORM" action="/stocks_info/individual_list_top.asp?FLG=0">
+						<table border="0" cellpadding="0" cellspacing="0" valign="middle">
+						<tbody><tr>
+						<td style="font-weight:bold;width:116px;">
+							<button type="button" onclick="javascript:dispVoiceMenu(516, 200);" style="width:100px;">ご意見ボックス</button>
+						</td>
+						<td style="width:116px;">
+							<input type="text" name="S_SC" style="height:20px;width:116px;" />
+						</td>
+						<td style="width:110px;padding-left:5px;" align="right">
+							<button type="button" style="width:110px;" onclick="stock_search();">検索</button>
+						</td>
+						</tr>
+						</tbody></table>
+						</form>
+						</div>
+						<div style="clear:both;"></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+	<!-- メニューここまで -->
+
+<!-- ご意見ボックス -->
+<div class="floatmenue_fr" id="fm_voice" style="width: 400px;height: 450px;">
+	<div style="padding:0 0 0 198px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr3" style="width: 374px;">
+				<table style="width: 374px;">
+					<tbody><tr>
+						<th style="background-image: url(/header/img/login_bg.png);background-repeat: repeat-x;padding:2px 0 0 12px;width: 374px;">
+							<span class="floatmenue_th2" style="vertical-align:top;">ご意見ボックス</span>
+							<span style="margin-left:250px;padding:0;" onclick="javascript:dispVoiceMenu(516, 200);"><img src="/header/img/close.png" /></span>
+						</th>
+					</tr>
+					<tr id="voice_head">
+						<td style="padding:12px 14px 3px 12px;">
+						当ウェブサービスの問題点や提供してほしい情報など、トレー<br />ダーズ・ウェブへのご意見・ご要望を、お気軽にお寄せください。
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 8px;" id="voice_main">
+						<form name="FrmVoice">
+						<table style="width: 356px;background-color: #eeeeee;border-collapse: collapse ;">
+							<tbody><tr>
+								<td style="padding: 9px;width:140px;">年齢をご入力下さい</td>
+								<td style="width: 220px;">
+									<input type="text" maxlength="2" name="USR_AGE" style="width:60px;" />
+									<span style="color:#808080;margin-left:4px;">※半角数字</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding: 9px;width:140px;">性別をご選択下さい</td>
+								<td style="width: 220px;">
+									<input type="radio" name="USR_SEX" value="男性" /> 男性　
+									<input type="radio" name="USR_SEX" value="女性" /> 女性
+									<input type="hidden" name="VOICE_SEX" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding:9px;">ご覧のコンテンツ 「 <input type="text" id="CNT_NAME" name="CNT_NAME" style="width:220px;background-color:#eeeeee;border:none;" readonly="" />」<input type="hidden" name="VOICE_HDN" /></td>
+								
+							</tr>
+						</tbody></table>
+						</form>
+						</td>
+					</tr>
+					<tr id="voice_cnfm" style="display:none;">
+						<td style="padding:8px;">
+						<table style="width: 358px;background-color: #eeeeee;border-collapse: collapse ;">
+							<tbody><tr><td style="padding:8px;height:20px;" id="conf_age">age</td></tr>
+							<tr><td style="padding:8px;height:20px;" id="conf_sex">sex</td></tr>
+							<tr><td style="padding:8px;height:20px;" id="conf_cnt">cnt</td></tr>
+							<tr><td style="padding:8px;background-color: #FFFFFF;" id="conf_txt">txt</td></tr>
+						</tbody></table>
+						</td>
+					</tr>
+					<tr id="voice_text">
+						<td style="padding-left:8px;">
+						<textarea id="voice_cmnt" cols="55" rows="7" wrap="soft" maxlength="250" onclick="initvoice(this);">ご意見・ご要望など、250文字以内でこちらにお書きください。</textarea>
+						</td>
+					</tr>
+					<tr id="voice_rslt" style="display:none;">
+						<td style="padding:8px;" id="result_disp"></td>
+					</tr>
+					<tr>
+						<td style="padding:12px 0 10px 136px;">
+						<button type="button" onclick="checkvoice(this);" tabindex="0" style="width:108px;font-size:12px;">確認</button>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 6px 11px 11px;">
+							<span style="color: #FF0000;">
+								※ご意見ボックスでは「ご質問」や「問い合わせ」には対応して
+								<p style="padding-left:1em">おりません。御用のお客様は「<a href="javascript:window.open('https://www.traders.co.jp/service/support/inquiry_free.asp','contact','scrollbars=yes,width=695,height=915');void(0);" style="color: #0000FF;text-decoration: underline;">お問い合わせ</a>」フォームをご利用ください。</p>
+							</span>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="floatmenue_fr" id="fm_domestic" onmouseout="hideSubMenu('fm_domestic');" onmouseover="dispSubMenu('fm_domestic', 167, 145);" style="width: 550px;height: 380px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td colspan="3">
+					<div class="floatmenue_fr_midashi" style="width: 550px;">
+					日本株メニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td colspan="3" class="confr_center" style="padding-bottom: 0px;">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">最新情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_stocks_top.asp">国内トップページ</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_left" style="padding-top: 0px;">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">国内株式</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/market_topix.asp">マーケットの話題</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/foreign_funding/foreign_funding.asp">外資系動向</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/market_s/market_s.asp">市場スケジュール</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/kessan_s/kessan_s.asp">決算発表スケジュール</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/kokunai_index/kokunai_index.asp">株式指標一覧</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/dom_ranking/dom_ranking.asp">ランキング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/dom_ranking/ranking_sector.asp">業種別ランキング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/stop_price/stop_price.asp">ストップ高安銘柄一覧</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/new_price/new_price.asp">新高値安値銘柄一覧</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/most_price/most_price.asp">最高値安値銘柄一覧</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/as/as.asp">初動銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/stock_list.asp">銘柄一覧</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">銘柄情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/wadai.asp">話題の銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/kobetsu/kobetsu.asp">個別株情報</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/achievements/achievements.asp">業績修正</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/attention_rating/attention_rating.asp">注目レーティング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/rating_def.asp">レーティング定義</a></td></tr>
+						</tbody></table>
+					</td>
+					<td class="confr_center" style="padding-top: 0px;">
+						<table class="floatmenue_contents">
+						
+						
+						<tbody><tr><th class="menu_th">会員情報パフォーマンス</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/ichiban/ichiban.asp">買推奨「一番搾り」</a></td></tr>
+						<tr><td style="word-break:keep-all;"><a class="floatmenuelink" href="/domestic_stocks/domestic_market/breakout/breakout.asp">買推奨「プレミアム初動銘柄」</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/domestic_market/short/short.asp">売推奨「カラ売り銘柄」</a></td></tr>
+						
+						
+						<tr><th class="menu_th">株式データ</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/merger/merger.asp">合併</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_move/stocks_move.asp">株式移転</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_exchange/stocks_exchange.asp">株式交換</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_split/stocks_split.asp">株式分割</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_union/stocks_union.asp">株式併合</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/sale/sale.asp">公募・売り出し</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/name_change/name_change.asp">社名変更</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/third_person/third_person.asp">第三者割当増資</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stock_change/stock_change.asp">単元株変更</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/investment_3/investment_3.asp" target="_blank">投資主体別売買動向<img src="/header/img/otherwindow.gif" /></a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/fund_s/fund_s.asp">投信スケジュール</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/n_225.asp">日経225銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/price_width.asp">値幅制限表</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/brand_move/brand_move.asp">銘柄異動</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/cb/cb.asp">国内公募CB</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/reit/reit.asp">新規REIT・インフラファンド</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/stocks_data/tachi/tachi.asp">立会外分売</a></td></tr>
+						</tbody></table>
+					</td>
+					<td class="confr_right" style="padding-top: 0px;">
+						<table class="floatmenue_contents">
+						<tbody><tr><th>その他</th></tr>
+						<tr><td><a class="floatmenuelink" target="_blank" href="http://archive.mag2.com/0000113398/index.html">メールマガジン（日刊）</a><img src="/header/img/otherwindow.gif" /></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/kokunai_link/kokunai_news.asp">リンク(国内新聞・通信社など)</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/help/help.asp">HELP</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr>
+				</tbody></table>
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<div class="floatmenue_fr" id="fm_foreign" onmouseout="hideSubMenu('fm_foreign');" onmouseover="dispSubMenu('fm_foreign', 507, 145);" style="width: 200px;height: 300px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td>
+					<div class="floatmenue_fr_midashi" style="width: 185px;">
+					米国株メニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_center">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">最新情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/foreign_stocks_top.asp">海外トップページ</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">海外マーケット</th></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/foreign_topix.asp">マーケットの話題</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/market_s.asp">海外市場スケジュール</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/foreign_index/foreign_index_list.asp">世界の株式指数</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/ranking_sector.asp">米国 業種別ランキング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/ranking_kobetsu.asp">米国 個別株ランキング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/adr.asp">ADR銘柄引値一覧</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/saiken.asp">債券市場</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/commodity.asp">NYコモディティー市場</a></td></tr>
+						<!--<tr><td><a class="floatmenuelink" href="/foreign_stocks/global/summary.asp">グローバルインデックス</a></td></tr>-->
+						<!--<tr><td><a class="floatmenuelink" href="/foreign_stocks/ranking_nasdaq.asp">NASDAQ業種別ランキング</a></td></tr>-->
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">海外銘柄情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/introduction/usa.asp">米国主要銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/introduction/china.asp">中国主要銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/introduction/korea.asp">韓国主要銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/introduction/taiwan.asp">台湾主要銘柄</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">その他</th></tr>
+						<tr><td><a class="floatmenuelink" href="/foreign_stocks/foreign_link/foreign_link.asp">リンク(海外新聞・通信社など)</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr>
+				</tbody></table>
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<div class="floatmenue_fr" id="fm_ipo" onmouseout="hideSubMenu('fm_ipo');" onmouseover="dispSubMenu('fm_ipo', 251, 145);" style="width: 200px;height: 300px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td>
+					<div class="floatmenue_fr_midashi" style="width: 185px;">
+					IPOメニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_center">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">最新情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/ipo_info_top.asp">IPOトップページ</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">IPO情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/schedule/schedule.asp">IPOスケジュール</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/calendar/calendar.asp">カレンダー</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/stockboard/stockboard.asp">ストックボード</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/report/report.asp">ウィークリーリポート</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/stop/stop.asp">延期・中止</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/unlisted_stock/unlisted_stock.asp">未公開株</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/ipo_info/first_price/first_price.asp">初値予想の結果</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr></tbody></table>
+					
+					
+				
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="floatmenue_fr" id="fm_margin" onmouseout="hideSubMenu('fm_margin');" onmouseover="dispSubMenu('fm_margin', 337, 145);" style="width: 200px;height: 300px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td>
+					<div class="floatmenue_fr_midashi" style="width: 185px;">
+					信用取引メニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_center">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">最新情報</th></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/margin_top.asp">信用取引トップページ</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">信用取引</th></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/comment/comment.asp">信用残コメント</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/transition/transition.asp">信用残の推移</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/dc_transaction/dc_transaction.asp">貸借取引残高</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/backwardation/backwardation.asp">逆日歩</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/target_date.asp">信用期日</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/regulation/regulation.asp">規制・日々公表・管理銘柄</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/ranking_margin.asp">信用ランキング</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">その他</th></tr>
+						<tr><td><a class="floatmenuelink" href="/margin/help/margin_help.asp">HELP</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr></tbody></table>
+					
+					
+				
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<div class="floatmenue_fr" id="fm_economic" onmouseout="hideSubMenu('fm_economic');" onmouseover="dispSubMenu('fm_economic', 760, 145);" style="width: 200px;height: 300px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td>
+					<div class="floatmenue_fr_midashi" style="width: 185px;">
+					経済データメニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_center">
+						<table class="floatmenue_contents" style="width:100%;">
+						<tbody><tr><th class="menu_th">最新情報</th></tr>
+						<tr><td><a href="/economic_data/economic_data_top.asp">経済データトップページ</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents" style="width:100%;">
+						<tbody><tr><th class="menu_th">経済データ</th></tr>
+						<tr><td><a href="/economic_data/kokunai_e_index/kokunai_e_index_top.asp">国内</a></td></tr>
+						<tr><td><a href="/economic_data/kaigai_e_index/kaigai_e_index_top.asp">米国</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=eu">ユーロ圏</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=de">ドイツ</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=uk">英国</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=ch">スイス</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=au">豪州</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=nz">ニュージーランド</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=ca">カナダ</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=za">南アフリカ</a></td></tr>
+						<tr><td><a href="/economic_data/etc_e_index/etc_e_index.asp?type=cn">中国</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr></tbody></table>
+					
+					
+				
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<div class="floatmenue_fr" id="fm_tool" onmouseout="hideSubMenu('fm_tool');" onmouseover="dispSubMenu('fm_tool', 421, 145);" style="width: 200px;height: 300px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td>
+					<div class="floatmenue_fr_midashi" style="width: 185px;">
+					投資ツールメニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_center">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">総合案内</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/tool_top.asp">投資ツールトップページ</a></td></tr>
+						</tbody></table>
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">投資ツール</th></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/screening/screening_top.asp">銘柄スクリーニング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/stockholder/stockholder_search.asp">株式優待スクリーニング</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/compass/compass.asp">トレーダーズ・コンパス</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/mp/mp_top.asp">マーケットピクチャー</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/futures/futures_top.asp">先物・手口情報</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="javascript:void(0);" onclick="window.open('/domestic_stocks/invest_tool/futures/futures_op.asp', 'futures');">OPTION・手口情報</a><img src="/images/icn/otherwindow.png" /></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/option/option_top.asp">オプション・シミュレーター</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/domestic_stocks/invest_tool/cw_simulator/cw_simulator.asp">eワラント 理論価格</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr></tbody></table>
+					
+					
+				
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<div class="floatmenue_fr" id="fm_user" onmouseout="hideSubMenu('fm_user');" onmouseover="dispSubMenu('fm_user', 843, 145);" style="width: 200px;height: 300px;">
+	<div style="padding:0px 0px 0px 25px;margin:0px;background-color:">
+	<img src="/header/img/sankaku.png" />
+	</div>
+	<div class="shadow">
+		<div class="frame">
+			<div align="tablewaku">
+			<div class="floatmenue_confr_s">
+				<table>
+					<tbody><tr>
+					<td>
+					<div class="floatmenue_fr_midashi" style="width: 185px;">
+					会員サービスメニュー
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<td class="confr_center">
+						<table class="floatmenue_contents">
+						<tbody><tr><th class="menu_th">総合案内</th></tr>
+						<tr><td><a class="floatmenuelink" href="/service/service_list.asp">DZHFRの会員サービス一覧</a></td></tr>
+						<tr><th class="menu_th">日本株会員サービス（有料）</th></tr>
+						<tr><td><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=1">会員サービスのご案内</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=2">豊富な銘柄情報</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=3">便利な機能と投資相談サービス</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=4">充実のIPO情報</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=5">ご利用料金とお申込みの流れ</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=6">会員サービスＱ＆Ａ</a></td></tr>
+						<tr><td><a class="floatmenuelink" target="_blank" href="https://dzh.traders.co.jp/nihonkabu/nihon_analyst.html">日本株アナリスト紹介<img src="/header/img/otherwindow.gif" /></a></td></tr>
+						<tr><td><a class="floatmenuelink" target="_blank" href="https://premiumplus.traders.co.jp/guide/premium_guide_0_all.pdf">プレミアム使い方ガイド<img src="/header/img/otherwindow.gif" /></a></td></tr>
+						<tr><td><a class="floatmenuelink" target="_blank" href="https://premiumplus.traders.co.jp">会員ログイン<img src="/header/img/otherwindow.gif" /></a></td></tr>
+						<tr><th class="menu_th">その他</th></tr>
+						<tr><td><a class="floatmenuelink" href="/faq.asp">FAQ（よくあるご質問）</a></td></tr>
+						<tr><td><a class="floatmenuelink" href="javascript:window.open('https://www.traders.co.jp/service/support/inquiry_free.asp','contact','scrollbars=yes,width=695,height=915');void(0);">お問い合わせ</a></td></tr>
+						</tbody></table>
+					</td>
+					</tr></tbody></table>
+					
+					
+				
+			</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+</div>
+</div>
+
+	</div>
+	<!-- ヘッダー_END -->
+
+
+	<!-- メイン部分_START -->
+	<div id="main_wrapper2">
+		<!-- 左コンテンツ -->
+		
+		<!-- 左コンテンツ -->
+		
+		<!-- 国内 -->
+<div id="left_contents_180">
+	<div class="left_menu">
+
+		<div class="m_bluebg"><a href="/domestic_stocks/invest_tool/tool_top.asp" style="color:#ffffff;">投資ツール</a></div>
+		<div class="left_detail">
+		<ul>
+			<li><a href="/domestic_stocks/invest_tool/screening/screening_top.asp">銘柄スクリーニング</a></li><li><a href="/domestic_stocks/invest_tool/stockholder/stockholder_search.asp">株式優待スクリーニング</a></li><li><a href="/domestic_stocks/invest_tool/compass/compass.asp">トレーダーズ・コンパス</a></li><li><a href="/domestic_stocks/invest_tool/mp/mp_top.asp">マーケットピクチャー</a></li><li style="color:#FF0000; font-weight: 800;">先物・手口情報</li>
+			<li><a href="javascript:void(0);" onclick="window.open('/domestic_stocks/invest_tool/futures/futures_op.asp', 'futures');">OPTION・手口情報<img src="/images/icn/otherwindow.png" /></a></li>
+			<li><a href="/domestic_stocks/invest_tool/option/option_top.asp">オプション・シミュレーター</a></li><li><a href="/domestic_stocks/invest_tool/cw_simulator/cw_simulator.asp">eワラント 理論価格</a></li>
+		</ul>
+		<img src="/img/spc.png" height="10px" width="1px" />
+		</div>
+
+
+</div>
+
+	<!--バナー-->
+	<div style="margin-top:12px;margin-bottom:12px;">
+	<a href="https://www.iwaicosmo.net/netlp/daytradefree_article4.html?daymargin_tweb_dzh" target="_blank" onclick="ga('send', 'event', 'banner-side-left-small', 'click', 'banner-iwaicosmo-sl', 0);"><img src="/advefile/iwai_banner_sl.jpg" alt="" width="180" height="80" onload="ga('send','event','banner-side-left-small','impression','banner-iwaicosmo-sl', 0);" /></a>
+	</div>
+
+	<!--本日の更新状況-->
+	<div class="m_bluebg" style="background-color:#DA3421;">本日の更新状況</div>
+	<div class="memoarea">
+		<table class="memoarea_text">
+		<tbody><tr><td class="td_upd_info25">17:33</td><td class="td_upd_info75"><a href="/domestic_stocks/invest_tool/futures/futures_top.asp" style="text-decoration:none;">先物・手口情報</a></td></tr>
+<tr><td class="td_upd_info25">17:33</td><td class="td_upd_info75"><a href="/domestic_stocks/invest_tool/futures/futures_op.asp" style="text-decoration:none;">OPTION・手口情報 </a></td></tr>
+<tr><td class="td_upd_info25">17:29</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/achievements/achievements.asp" style="text-decoration:none;">業績修正 </a></td></tr>
+<tr><td class="td_upd_info25">17:10</td><td class="td_upd_info75"><a href="/domestic_stocks/stocks_data/stocks_split/stocks_split.asp" style="text-decoration:none;">株式分割</a></td></tr>
+<tr><td class="td_upd_info25">17:00</td><td class="td_upd_info75"><a href="/domestic_stocks/stocks_data/brand_move/brand_move.asp" style="text-decoration:none;">銘柄異動</a></td></tr>
+<tr><td class="td_upd_info25">16:57</td><td class="td_upd_info75"><a href="/domestic_stocks/stocks_data/tachi/tachi.asp" style="text-decoration:none;">立会外分売</a></td></tr>
+<tr><td class="td_upd_info25">16:49</td><td class="td_upd_info75"><a href="/ipo_info/stockboard/stockboard.asp" style="text-decoration:none;">ストックボード</a></td></tr>
+<tr><td class="td_upd_info25">16:25</td><td class="td_upd_info75"><a href="/margin/regulation/regulation.asp" style="text-decoration:none;">規制・日々公表・管理銘柄</a></td></tr>
+<tr><td class="td_upd_info25">15:59</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/market_topix.asp" style="text-decoration:none;">マーケットの話題 </a></td></tr>
+<tr><td class="td_upd_info25">15:49</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/dom_ranking/dom_ranking.asp" style="text-decoration:none;">ランキング</a></td></tr>
+<tr><td class="td_upd_info25">15:30</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/dom_ranking/ranking_sector.asp" style="text-decoration:none;">業種別ランキング</a></td></tr>
+<tr><td class="td_upd_info25">15:16</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/new_price/new_price.asp" style="text-decoration:none;">新高値安値銘柄一覧 </a></td></tr>
+<tr><td class="td_upd_info25">15:16</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/stop_price/stop_price.asp" style="text-decoration:none;">ストップ高安銘柄一覧</a></td></tr>
+<tr><td class="td_upd_info25">15:08</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/kobetsu/kobetsu.asp" style="text-decoration:none;">個別株情報</a></td></tr>
+<tr><td class="td_upd_info25">14:55</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/attention_rating/attention_rating.asp" style="text-decoration:none;">注目レーティング </a></td></tr>
+<tr><td class="td_upd_info25">12:15</td><td class="td_upd_info75"><a href="/margin/backwardation/backwardation.asp" style="text-decoration:none;">逆日歩 </a></td></tr>
+<tr><td class="td_upd_info25">09:56</td><td class="td_upd_info75"><a href="/domestic_stocks/stocks_data/cb/cb.asp" style="text-decoration:none;">CB</a></td></tr>
+<tr><td class="td_upd_info25">07:15</td><td class="td_upd_info75"><a href="/foreign_stocks/adr.asp" style="text-decoration:none;">ADR銘柄引値一覧 </a></td></tr>
+<tr><td class="td_upd_info25">07:07</td><td class="td_upd_info75"><a href="/margin/ranking_margin.asp" style="text-decoration:none;">信用ランキング</a></td></tr>
+<tr><td class="td_upd_info25">07:06</td><td class="td_upd_info75"><a href="/margin/target_date.asp" style="text-decoration:none;">信用期日</a></td></tr>
+<tr><td class="td_upd_info25">06:45</td><td class="td_upd_info75"><a href="/domestic_stocks/domestic_market/wadai.asp" style="text-decoration:none;">話題の銘柄</a></td></tr>
+<tr><td class="td_upd_info25">06:44</td><td class="td_upd_info75"><a href="/foreign_stocks/ranking_sector.asp" style="text-decoration:none;">米国　業種別ランキング</a></td></tr>
+<tr><td class="td_upd_info25">06:44</td><td class="td_upd_info75"><a href="/foreign_stocks/foreign_index/foreign_index_list.asp" style="text-decoration:none;">世界の株式指数</a></td></tr>
+
+		</tbody></table>
+	</div>
+	<br />
+	
+	<!--インフォメーション-->
+	<div class="m_bluebg" style="background-color:#EAA320;">インフォメーション</div>
+	<div class="info_cell"><div class="info_red">会員サービス『 トレーダーズ・プレミアム 』のご案内</div>毎朝寄り付き前にお届けする 『推奨銘柄』 はもろん、インターネット情報では珍しい、株式アナリストのアドバイスが１対１で受けられるサービス 『投資相談室』 も提供しています！<br /><a href="http://www.traders.co.jp/service/premium/intro/info.asp" target="_blank">≫ 詳細はこちら<br /></a></div><p class="box_side"></p><div class="info_cell"><div class="info_red">【無料メルマガ】『日刊トレーダーズ』のご案内</div>当サイト人気情報の 『明日の戦略』 や、市場が注目した銘柄に関するニュースを毎夕メールでお届けしています！<br /><a href="http://www.mag2.com/m/0000113398.html" target="_blank">≫ 詳細はこちら<br /></a></div>						
+	</div>
+	<!-- 左コンテンツここまで -->
+		<!-- 左コンテンツここまで -->
+		<!-- 中コンテンツ -->
+		<div id="middle_contents_820">
+		
+
+<!-- 共通見出し/右メニューなし -->
+<table style="width:820px;">
+<tbody><tr>
+<td><img src="/img/border_b_810.png" style="vertical-align: top;" />
+</td>
+</tr>
+	<tr>
+		<td class="b_bold_common01_othermenu">先物・手口情報
+		</td>
+	</tr>
+<tr>
+	<td><img src="/img/border_g_810.png" />
+	</td>
+</tr>
+
+	<tr>
+		<td style="padding-bottom: 15px;">
+<!-- アドセンスここから -->
+<span class="adsensezone">
+<script type="text/javascript">&lt;!--
+google_ad_client = "pub-1231648855741743";
+/* 総合サイト_RU_W468_4U */
+google_ad_slot = "5279055650";
+google_ad_width = 468;
+google_ad_height = 15;
+//--&gt;
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent;"><iframe width="468" height="15" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:468px;height:15px;"></iframe></ins></ins>
+</span>
+<!-- アドセンスここまで -->
+		</td>
+	</tr>
+
+</tbody></table>
+<!-- 共通見出しここまで -->
+
+<script type="text/javascript">&lt;!--
+function row_on(obj_tr) {
+	var obj_tr_chlds = obj_tr.getElementsByTagName('td');
+	var obj_td;
+	for (i=0;i&lt;obj_tr_chlds.length;i++) {
+		obj_td = obj_tr_chlds[i];
+		obj_td.style.backgroundColor='#FFFFCC';
+	}
+}
+function row_off(obj_tr) {
+	var obj_tr_chlds = obj_tr.getElementsByTagName('td');
+	var obj_td;
+	for (i=0;i&lt;obj_tr_chlds.length;i++) {
+		obj_td = obj_tr_chlds[i];
+		if (obj_td.className == 'list_broker') {
+			obj_td.style.backgroundColor='#CCCCCC';
+		} else {
+			obj_td.style.backgroundColor='#FFFFFF';
+		}
+	}
+}
+//--&gt;
+</script>
+<style type="text/css">
+&lt;!--
+.list_header {
+	background-color:#666666;
+	color:#FFFFFF;
+	font-size:10pt;
+	vertical-align:middle;
+	text-align:center;
+	white-space:nowrap;
+	border:1px solid #969696;
+}
+.list_broker {
+	background-color:#CCCCCC;
+	color:#000000;
+	font-size:10pt;
+	vertical-align:middle;
+	text-align:left;
+	white-space:nowrap;
+	padding:1px 0 1px 2px;
+	border:1px solid #969696;
+}
+.list_cell {
+	font-size:10pt;
+	vertical-align:middle;
+	text-align:right;
+	white-space:nowrap;
+	padding-right:1px;
+	border:1px solid #969696;
+}
+--&gt;
+</style>
+<div style="background-color: #FFFFFF;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="MM_preloadImages('../../../image/header/m_kj2.gif','../../../image/header/m_tb2.gif','../../../image/header/m_kd2.gif','../../../image/header/m_ra2.gif','../../../image/header/m_li2.gif','../../../image/header/m_si2.gif','../../../image/header/m_to2.gif')"></div>
+
+<div class="contents_with_right_w650" width="630px">
+
+<div style="padding-left: 1px;">
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td valign="top">
+         <!-- ここからデザイン変更 -->
+              <table width="630px" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr> 
+                  <td bgcolor="#FFFFFF"> 
+                    <table border="0">
+                      <tbody><tr> 
+                        <td> 
+						<table width="630px" border="0" cellspacing="2" cellpadding="1" style="margin-bottom:2px;">
+						   <tbody><tr> 
+							<td width="10" bgcolor="39A6E5">　</td>
+							<td style="padding:5px;color:#FFFFFF;font-size:10pt;font-weight:bold;" bgcolor="0070B1">
+								本日の先物取引情報 ( 7月25日分 )
+							</td>
+						  </tr>
+						</tbody></table>
+						<table border="0" align="left">
+							<tbody><tr>
+								<td rowspan="2" nowrap="" width="85" class="list_header">証券会社名</td>
+								<td colspan="3" class="list_header">225 9月限</td>
+								<td width="2"> </td>
+								<td colspan="3" class="list_header">TOPIX 9月限</td>
+								<td width="2"> </td>
+								<td colspan="3" class="list_header">225ミニ 9月限</td>
+							</tr>
+							<tr>
+								<td width="60" class="list_header">SELL</td>
+								<td width="60" class="list_header">BUY</td>
+								<td width="60" class="list_header">NET</td>
+								<td width="2"> </td>
+								<td width="60" class="list_header">SELL</td>
+								<td width="60" class="list_header">BUY</td>
+								<td width="60" class="list_header">NET</td>
+								<td width="2"> </td>
+								<td width="60" class="list_header">SELL</td>
+								<td width="60" class="list_header">BUY</td>
+								<td width="60" class="list_header">NET</td>
+							</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＪＰモルガン                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">92</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1135</td>
+						<td width="60" class="list_cell" style="color:#000000;">1043</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1082</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1409</td>
+						<td width="60" class="list_cell" style="color:#000000;">327</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">3037</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1539</td>
+						<td width="60" class="list_cell" style="color:#000000;">-1498</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＭＳＭ                                                                                              </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1365</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1727</td>
+						<td width="60" class="list_cell" style="color:#000000;">362</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1052</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">2986</td>
+						<td width="60" class="list_cell" style="color:#000000;">1934</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">4567</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">7825</td>
+						<td width="60" class="list_cell" style="color:#000000;">3258</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＡＢＮアムロ                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">7839</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">8155</td>
+						<td width="60" class="list_cell" style="color:#000000;">316</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">8450</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">8436</td>
+						<td width="60" class="list_cell" style="color:#000000;">-14</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">143107</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">139469</td>
+						<td width="60" class="list_cell" style="color:#000000;">-3638</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＨＳＢＣ                                                                                            </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">-</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">245</td>
+						<td width="60" class="list_cell" style="color:#000000;">245</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">-</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">792</td>
+						<td width="60" class="list_cell" style="color:#000000;">792</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">野村                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1579</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1795</td>
+						<td width="60" class="list_cell" style="color:#000000;">216</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1461</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1572</td>
+						<td width="60" class="list_cell" style="color:#000000;">111</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">2314</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">4223</td>
+						<td width="60" class="list_cell" style="color:#000000;">1909</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ソシエテ                                                                                            </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">6669</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">6872</td>
+						<td width="60" class="list_cell" style="color:#000000;">203</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">8976</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">9138</td>
+						<td width="60" class="list_cell" style="color:#000000;">162</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">89844</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">90513</td>
+						<td width="60" class="list_cell" style="color:#000000;">669</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">メリルリンチ                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">3680</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">3874</td>
+						<td width="60" class="list_cell" style="color:#000000;">194</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">5778</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">5626</td>
+						<td width="60" class="list_cell" style="color:#000000;">-152</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">36143</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">38535</td>
+						<td width="60" class="list_cell" style="color:#000000;">2392</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ドイツ                                                                                              </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">353</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">513</td>
+						<td width="60" class="list_cell" style="color:#000000;">160</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1334</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">577</td>
+						<td width="60" class="list_cell" style="color:#000000;">-757</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1603</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">2753</td>
+						<td width="60" class="list_cell" style="color:#000000;">1150</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">大和                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">28</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">151</td>
+						<td width="60" class="list_cell" style="color:#000000;">123</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">669</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">990</td>
+						<td width="60" class="list_cell" style="color:#000000;">321</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1388</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1381</td>
+						<td width="60" class="list_cell" style="color:#000000;">-7</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">岡三                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">278</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">362</td>
+						<td width="60" class="list_cell" style="color:#000000;">84</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">363</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">246</td>
+						<td width="60" class="list_cell" style="color:#000000;">-117</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">6433</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">5985</td>
+						<td width="60" class="list_cell" style="color:#000000;">-448</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＧＭＯクリック                                                                                      </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">212</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">269</td>
+						<td width="60" class="list_cell" style="color:#000000;">57</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">3419</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">3245</td>
+						<td width="60" class="list_cell" style="color:#000000;">-174</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">シティＧ                                                                                            </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">50</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">49</td>
+						<td width="60" class="list_cell" style="color:#000000;">-1</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1054</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">438</td>
+						<td width="60" class="list_cell" style="color:#000000;">-616</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">日産                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">241</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">205</td>
+						<td width="60" class="list_cell" style="color:#000000;">-36</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">165</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">129</td>
+						<td width="60" class="list_cell" style="color:#000000;">-36</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">-</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1987</td>
+						<td width="60" class="list_cell" style="color:#000000;">1987</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＵＢＳ                                                                                              </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">254</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">204</td>
+						<td width="60" class="list_cell" style="color:#000000;">-50</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1080</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">205</td>
+						<td width="60" class="list_cell" style="color:#000000;">-875</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">カブドットコム                                                                                      </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">419</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">368</td>
+						<td width="60" class="list_cell" style="color:#000000;">-51</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">9152</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">9023</td>
+						<td width="60" class="list_cell" style="color:#000000;">-129</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">松井                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">385</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">330</td>
+						<td width="60" class="list_cell" style="color:#000000;">-55</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">16668</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">15989</td>
+						<td width="60" class="list_cell" style="color:#000000;">-679</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＢＮＰパリバ                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">301</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">234</td>
+						<td width="60" class="list_cell" style="color:#000000;">-67</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">649</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">639</td>
+						<td width="60" class="list_cell" style="color:#000000;">-10</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">2882</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">2761</td>
+						<td width="60" class="list_cell" style="color:#000000;">-121</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＳＭＢＣ日興                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">222</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">94</td>
+						<td width="60" class="list_cell" style="color:#000000;">-128</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">581</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">101</td>
+						<td width="60" class="list_cell" style="color:#000000;">-480</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ライブスター                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">268</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">136</td>
+						<td width="60" class="list_cell" style="color:#000000;">-132</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1790</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1826</td>
+						<td width="60" class="list_cell" style="color:#000000;">36</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">みずほ                                                                                              </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">560</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">428</td>
+						<td width="60" class="list_cell" style="color:#000000;">-132</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">916</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1038</td>
+						<td width="60" class="list_cell" style="color:#000000;">122</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">3680</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">3688</td>
+						<td width="60" class="list_cell" style="color:#000000;">8</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">楽天                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">909</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">741</td>
+						<td width="60" class="list_cell" style="color:#000000;">-168</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">11467</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">10889</td>
+						<td width="60" class="list_cell" style="color:#000000;">-578</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＭＵＭＳ                                                                                            </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">286</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">110</td>
+						<td width="60" class="list_cell" style="color:#000000;">-176</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">898</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">276</td>
+						<td width="60" class="list_cell" style="color:#000000;">-622</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ＳＢＩ                                                                                              </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1238</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">1018</td>
+						<td width="60" class="list_cell" style="color:#000000;">-220</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">12</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">221</td>
+						<td width="60" class="list_cell" style="color:#000000;">209</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">32626</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">30377</td>
+						<td width="60" class="list_cell" style="color:#000000;">-2249</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ゴールドマン                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">649</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">364</td>
+						<td width="60" class="list_cell" style="color:#000000;">-285</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1064</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">986</td>
+						<td width="60" class="list_cell" style="color:#000000;">-78</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">バークレイズ                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">532</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">33</td>
+						<td width="60" class="list_cell" style="color:#000000;">-499</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">410</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">645</td>
+						<td width="60" class="list_cell" style="color:#000000;">235</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">Ｃスイス                                                                                            </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">649</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">146</td>
+						<td width="60" class="list_cell" style="color:#000000;">-503</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">626</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">552</td>
+						<td width="60" class="list_cell" style="color:#000000;">-74</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">広田                                                                                                </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">-</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">121</td>
+						<td width="60" class="list_cell" style="color:#000000;">121</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1378</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">-</td>
+						<td width="60" class="list_cell" style="color:#000000;">-1378</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">東海東京                                                                                            </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">205</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">-</td>
+						<td width="60" class="list_cell" style="color:#000000;">-205</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">1746</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">2237</td>
+						<td width="60" class="list_cell" style="color:#000000;">491</td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">ナティクシス                                                                                        </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">190</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">-</td>
+						<td width="60" class="list_cell" style="color:#000000;">-190</td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+					</tr>
+					 
+					<tr onmouseover="row_on(this);" onmouseout="row_off(this);">
+						<td nowrap="" class="list_broker">マネックス                                                                                          </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;"></td>
+						<td width="60" class="list_cell" style="color:#FF0000;"></td>
+						<td width="60" class="list_cell" style="color:#000000;"></td>
+						<td width="2"> </td>
+						<td width="60" class="list_cell" style="color:#0000FF;">3495</td>
+						<td width="60" class="list_cell" style="color:#FF0000;">3248</td>
+						<td width="60" class="list_cell" style="color:#000000;">-247</td>
+					</tr>
+					 
+                          </tbody></table>
+                          <p></p>
+                        </td>
+                      </tr>
+					 <tr>
+                        <td colspan="2" height="10"><br />
+	                          <p style="font-size:10pt;color:#FF4D00;">
+	                          ※当社の先物手口情報は「日中取引（夜間取引、スプレッド市場を除く）」を対象に、
+	                          「立会内取引」だけではなく「立会外取引」の枚数も集計しております。このため、「立会外取引」のみを集計している当社以外の手口情報と枚数が
+	                          一致しない場合がございます。予めご了承下さい。
+	                          </p>
+	                          <p style="font-size:10pt;color:#FF4D00;margin-top:5px;">
+	                          ※手口は上位20社のみを表示しています。<br />
+							売り買い片方の手口が上位20社に入り、片方が上位20社に入らなかった場合には、<br />
+							入らなかった方を「－」と表示し、差し引きの計算には「－」を「0枚」に置き換えて算出しております。
+	                          </p>
+						     </td>
+						   </tr>
+					  <tr> 
+					   <td><br />
+						
+   						<table width="100%" border="0" cellspacing="2" cellpadding="1" bordercolor="9AA7AE">
+						  <tbody><tr> 
+						    <td width="20"><img src="../../../image/main/arrow7.gif" width="20" height="20" /></td>
+						    <td style="text-indent:0.25em;color:#555555;font-size:10pt;font-weight:bold;">
+						      <!--<a href="/domestic_stocks/invest_tool/futures/futures_op.asp">最新OPTION情報</a> ：各証券会社の「PUT」「CALL」「DELTA」の値が御覧いただけます。-->
+								<a href="javascript:void(0);" onclick="window.open('/domestic_stocks/invest_tool/futures/futures_op.asp', 'futures');">OPTION・手口情報<img src="/images/icn/otherwindow.png" /></a> ：各証券会社の「PUT」「CALL」「DELTA」の値が御覧いただけます。
+						    </td>
+						  </tr>
+						  
+						</tbody></table>
+						
+                       </td>
+                      </tr>
+                      
+                    </tbody></table>
+			     </td>
+                </tr>
+              </tbody></table>
+           <!-- 終了 --> 
+    </td>
+    <td valign="top">
+    </td>
+  </tr>
+</tbody></table>
+
+</div>
+</div>
+<div align="center" class="sub_right_w170">
+
+<!--Adsense-->
+<div class="side_banner">
+	<script type="text/javascript">&lt;!--
+	google_ad_client = "pub-1231648855741743";
+	/* dom_top_rig_IMGwidskys_IMG_160x600 */
+	google_ad_slot = "9547204886";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//--&gt;
+	</script>
+	<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+<br /><br />
+	<script type="text/javascript">&lt;!--
+	google_ad_client = "pub-1231648855741743";
+	/* dom_mid_rig_TXTwideskys_WW_160x600 */
+	google_ad_slot = "9993503839";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//--&gt;
+	</script>
+	<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div>
+
+</div>
+<!-- 2008/01/24 Google Analytics削除 -->
+
+		</div>
+		<!-- 中コンテンツここまで -->
+	</div>
+	<!-- メイン部分_END -->
+	
+	
+	<!-- フッターここから -->
+	<div>
+	
+
+	<!-- フッターここから -->
+	<div class="footer" style="padding-top: 25px;">
+		<table class="footer01">
+			<tbody><tr>
+				<td valign="bottom">
+					<div id="footer_div" style="text-align:left;">
+						<img src="/header/img/header.png" style="text-align:left;top:4px;left:9px;position:relative;" />
+					</div>
+					<a href="#page_top" style="color: #FFFFFF;">ページの先頭に戻る▲</a>
+				</td>
+			</tr>
+		</tbody></table>
+		<div style="width:1024px;background-color: #efefef;">
+			<div style="margin:0px 10px 0px 10px;border-bottom:1px solid #808080;font-size:11px;padding:5px;color:#666666;">
+			当サイトに掲載している内容の著作権は、株式会社DZH フィナンシャルリサーチ及び情報提供者に帰属します。掲載情報の転用、複製、販売等の一切を固く禁じております。<br />
+			当サイトのデータは、東京証券取引所、FactSet Research Systems ,Inc.、日本経済新聞社、東洋経済新報社、ストックウェザー等から提供を受けています。<br />
+			当サイトは投資勧誘を目的としたものではなく、あくまで情報提供を目的としたものですので銘柄や市場の選択の最終決定は、ご自身で判断されるようお願いいたします。<br />
+			当サイト上の情報の内容に関しては万全を期しておりますが、その内容の正確性および安全性を保証するものではありません。当該情報に基づいて被ったいかなる損害についても、株式会社DZH フィナンシャルリサーチ及び情報提供者は一切の責任を負いかねます。<br />
+			</div>
+		</div>
+
+		<table class="footer02">
+			<tbody><tr>
+		<!-- 1列目 -->
+				<td class="tdfooter">
+				<b><a class="floatmenuelink" href="/index.asp">ホーム</a></b><br />
+				<b><a class="floatmenuelink" href="/news/news_top.asp">ニュース</a></b><br />
+				<b><a class="floatmenuelink" href="/domestic_stocks/domestic_stocks_top.asp">日本株トップ</a></b><br />
+				<ul class="footerli">
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/market_topix.asp">マーケットの話題</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/foreign_funding/foreign_funding.asp">外資系動向</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/market_s/market_s.asp">市場スケジュール</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/kessan_s/kessan_s.asp">決算発表スケジュール</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/kokunai_index/kokunai_index.asp">株式指標一覧</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/dom_ranking/dom_ranking.asp">ランキング</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/dom_ranking/ranking_sector.asp">業種別ランキング</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/stop_price/stop_price.asp">ストップ高安銘柄一覧</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/new_price/new_price.asp">新高値安値銘柄一覧</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/most_price/most_price.asp">最高値安値銘柄一覧</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/as/as.asp">初動銘柄</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/stock_list.asp">銘柄一覧</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/wadai.asp">話題の銘柄</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/kobetsu/kobetsu.asp">個別株情報</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/achievements/achievements.asp">業績修正</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/attention_rating/attention_rating.asp">注目レーティング</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/rating_def.asp">レーティング定義</a></li>
+					
+					
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/ichiban/ichiban.asp">買推奨「一番搾り」</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/breakout/breakout.asp">買推奨「プレミアム初動銘柄」</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/domestic_market/short/short.asp">売推奨「カラ売り銘柄」</a></li>
+					
+					
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/merger/merger.asp">合併</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_move/stocks_move.asp">株式移転</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_exchange/stocks_exchange.asp">株式交換</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_split/stocks_split.asp">株式分割</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stocks_union/stocks_union.asp">株式併合</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/sale/sale.asp">公募・売り出し</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/name_change/name_change.asp">社名変更</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/third_person/third_person.asp">第三者割当増資</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/stock_change/stock_change.asp">単元株変更</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/investment_3/investment_3.asp" target="_blank">投資主体別売買動向<img src="/header/img/otherwindow.gif" /></a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/fund_s/fund_s.asp">投信スケジュール</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/n_225.asp">日経225銘柄</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/price_width.asp">値幅制限表</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/brand_move/brand_move.asp">銘柄異動</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/cb/cb.asp">国内公募CB</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/reit/reit.asp">新規REIT・インフラファンド</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/stocks_data/tachi/tachi.asp">立会外分売</a></li>
+					<li><a class="floatmenuelink" target="_blank" href="http://archive.mag2.com/0000113398/index.html">メールマガジン（日刊）</a><img src="/header/img/otherwindow.gif" /></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/kokunai_link/kokunai_news.asp">リンク(国内新聞・通信社など)</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/help/help.asp">HELP</a></li>
+				</ul>
+				</td>
+
+		<!-- 2列目 -->
+				<td class="tdfooter">
+				<b><a class="floatmenuelink" href="/ipo_info/ipo_info_top.asp">IPOトップ</a></b><br />
+				<ul class="footerli">
+					<li><a class="floatmenuelink" href="/ipo_info/schedule/schedule.asp">IPOスケジュール</a></li>
+					<li><a class="floatmenuelink" href="/ipo_info/calendar/calendar.asp">カレンダー</a></li>
+					<li><a class="floatmenuelink" href="/ipo_info/stockboard/stockboard.asp">ストックボード</a></li>
+					<li><a class="floatmenuelink" href="/ipo_info/report/report.asp">ウィークリーリポート</a></li>
+					<li><a class="floatmenuelink" href="/ipo_info/stop/stop.asp">延期・中止</a></li>
+					<li><a class="floatmenuelink" href="/ipo_info/unlisted_stock/unlisted_stock.asp">未公開株</a></li>
+					<li><a class="floatmenuelink" href="/ipo_info/first_price/first_price.asp">初値予想の結果</a></li>
+				</ul>
+				
+				<br />
+				<b><a class="floatmenuelink" href="/margin/margin_top.asp">信用取引トップ</a></b><br />
+				<ul class="footerli">
+					<li><a class="floatmenuelink" href="/margin/comment/comment.asp">信用残コメント</a></li>
+					<li><a class="floatmenuelink" href="/margin/transition/transition.asp">信用残の推移</a></li>
+					<li><a class="floatmenuelink" href="/margin/dc_transaction/dc_transaction.asp">貸借取引残高</a></li>
+					<li><a class="floatmenuelink" href="/margin/backwardation/backwardation.asp">逆日歩</a></li>
+					<li><a class="floatmenuelink" href="/margin/target_date.asp">信用期日</a></li>
+					<li><a class="floatmenuelink" href="/margin/regulation/regulation.asp">規制・日々公表・管理銘柄</a></li>
+					<li><a class="floatmenuelink" href="/margin/ranking_margin.asp">信用ランキング</a></li>
+					<li><a class="floatmenuelink" href="/margin/help/margin_help.asp">HELP</a></li>
+				</ul>
+				
+				<br />
+				<b><a class="floatmenuelink" href="/domestic_stocks/invest_tool/tool_top.asp">投資ツールトップ</a></b><br />
+				<ul class="footerli">
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/screening/screening_top.asp">銘柄スクリーニング</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/stockholder/stockholder_search.asp">株式優待スクリーニング</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/compass/compass.asp">トレーダーズ・コンパス</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/mp/mp_top.asp">マーケットピクチャー</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/futures/futures_top.asp">先物・手口情報</a></li>
+					<li><a class="floatmenuelink" href="javascript:void(0);" onclick="window.open('/domestic_stocks/invest_tool/futures/futures_op.asp', 'futures');">OPTION・手口情報</a><img src="/images/icn/otherwindow.png" /></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/option/option_top.asp">オプション・シミュレーター</a></li>
+					<li><a class="floatmenuelink" href="/domestic_stocks/invest_tool/cw_simulator/cw_simulator.asp">eワラント 理論価格</a></li>
+				</ul>
+
+				<br />
+				<b><a class="floatmenuelink" href="/foreign_stocks/foreign_stocks_top.asp">米国株トップ</a></b><br />
+				<ul class="footerli">
+					<li><a class="floatmenuelink" href="/foreign_stocks/foreign_topix.asp">マーケットの話題</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/market_s.asp">海外市場スケジュール</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/foreign_index/foreign_index_list.asp">世界の株式指数</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/ranking_sector.asp">米国 業種別ランキング</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/ranking_kobetsu.asp">米国 個別株ランキング</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/adr.asp">ADR銘柄引値一覧</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/saiken.asp">債券市場</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/commodity.asp">NYコモディティー市場</a></li>
+					<!--<li><a class="floatmenuelink" href="/foreign_stocks/global/summary.asp">グローバルインデックス</a></li>-->
+					<!--<li><a class="floatmenuelink" href="/foreign_stocks/ranking_nasdaq.asp">NASDAQ業種別ランキング</a></li>-->
+					<li><a class="floatmenuelink" href="/foreign_stocks/introduction/usa.asp">米国主要銘柄</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/introduction/china.asp">中国主要銘柄</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/introduction/korea.asp">韓国主要銘柄</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/introduction/taiwan.asp">台湾主要銘柄</a></li>
+					<li><a class="floatmenuelink" href="/foreign_stocks/foreign_link/foreign_link.asp">リンク(海外新聞・通信社など)</a></li>
+				</ul>
+				</td>
+				
+		<!-- 3列目 -->
+				<td class="tdfooter">
+				<b><a class="floatmenuelink" href="/economic_data/economic_data_top.asp">経済データトップ</a></b><br />
+				<ul class="footerli">
+					<li><a href="/economic_data/kokunai_e_index/kokunai_e_index_top.asp">国内</a></li>
+					<li><a href="/economic_data/kaigai_e_index/kaigai_e_index_top.asp">米国</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=eu">ユーロ圏</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=de">ドイツ</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=uk">英国</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=ch">スイス</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=au">豪州</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=nz">ニュージーランド</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=ca">カナダ</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=za">南アフリカ</a></li>
+					<li><a href="/economic_data/etc_e_index/etc_e_index.asp?type=cn">中国</a></li>
+				</ul>
+
+				</td>
+				
+		<!-- 4列目 -->
+				<td class="tdfooter">
+					<b><a class="floatmenuelink" href="/service/premium/intro/info.asp">会員サービストップ</a></b><br />
+					<ul class="footerli">
+						<li><a class="floatmenuelink" href="/service/service_list.asp">DZHFRの会員サービス一覧</a></li>
+					</ul>
+					<div style="font-size: 12px;font-weight: bold;padding:4px 2px 2px 5px;">日本株会員サービス（有料）</div>
+					<ul class="footerli">
+						<li><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=1">会員サービスのご案内</a></li>
+						<li><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=2">豊富な銘柄情報</a></li>
+						<li><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=3">便利な機能と投資相談サービス</a></li>
+						<li><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=4">充実のIPO情報</a></li>
+						<li><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=5">ご利用料金とお申込みの流れ</a></li>
+						<li><a class="floatmenuelink" href="/service/premium/intro/info.asp?page=6">会員サービスＱ＆Ａ</a></li>
+						<li><a class="floatmenuelink" target="_blank" href="https://dzh.traders.co.jp/nihonkabu/nihon_analyst.html">日本株アナリスト紹介<img src="/header/img/otherwindow.gif" /></a></li>
+						<li><a class="floatmenuelink" target="_blank" href="https://premiumplus.traders.co.jp/guide/premium_guide_0_all.pdf">プレミアムご利用ガイド<img src="/header/img/otherwindow.gif" /></a></li>
+						<li><a class="floatmenuelink" target="_blank" href="https://premiumplus.traders.co.jp">会員ログイン<img src="/header/img/otherwindow.gif" /></a></li>
+					</ul>
+					<div style="font-size: 12px;font-weight: bold;padding:4px 2px 2px 5px;">その他</div>
+					<ul class="footerli">	
+						<li><a class="floatmenuelink" href="/faq.asp">FAQ（よくあるご質問）</a></li>
+						<li><a class="floatmenuelink" href="javascript:window.open('https://www.traders.co.jp/service/support/inquiry_free.asp','contact','scrollbars=yes,width=695,height=915');void(0);">お問合わせ</a></li>
+					</ul>
+					<br />
+					<hr /><br />
+					
+					<b>DZHフィナンシャルリサーチ投資情報サイト</b><br />
+					<ul class="footerli">
+						<li><a class="floatmenuelink" href="/index.asp">総合サイト</a></li>
+						<li><a class="floatmenuelink" href="https://www.nikihou.jp">中国株専門サイト</a></li>
+						<li><a class="floatmenuelink" href="https://www.traderswebfx.jp">外国為替専門サイト</a></li>
+					</ul>
+					
+					<br />
+					<b><a href="javascript:window.open('/service/company/agreement.htm','','scrollbars=yes,width=425,height=600');void(0);">利用規約・免責事項</a></b><br />
+					<b><a href="javascript:window.open('/service/company/advertisement.htm','','scrollbars=yes,width=425,height=400');void(0);">広告掲載について</a></b><br />
+					<b><a href="javascript:window.open('/tr_privacy/tr_privacy.htm','','scrollbars=yes,width=425,height=530');void(0);">個人情報保護方針</a></b><br />
+					<b><a href="https://dzh.traders.co.jp/antisocial.html" target="_blank">反社会的勢力に対する基本方針</a></b><br /><br />
+					
+					<b><a href="https://dzh.traders.co.jp/index.php" target="_blank">会社案内</a></b><br />
+					<b><a href="https://dzh.traders.co.jp/recruit/recruit_index.html" target="_blank">採用情報</a></b><br />
+				</td>
+			</tr>
+		</tbody></table>
+
+		<div style="width:1024px;background-color: #efefef;text-align:center;">
+		<div style="border-top:1px solid #808080;width:1004px;margin:0px 10px 0px 10px;text-align:right;padding:3px 5px 3px auto;">- ©1999－2018 DZH FINANCIAL RESEARCH, INC -<div>
+		</div>
+
+	</div>
+
+	<!-- フッターここまで -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-541800-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</div>
+	<!-- フッターここまで -->
+</div>
+
+</div></div><iframe id="google_osd_static_frame_8201612058956" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>
