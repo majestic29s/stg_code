@@ -1,0 +1,21 @@
+$WebAPPAI = 'dev-bicep-ai01'
+#$WebAPP = 'fnappurjaiw7j43ad2'
+$WebAPP = 'dev-bicep-app01'
+$RG = 'test-bicep-rg2'
+$key =  (az monitor app-insights component show --app $WebAPPAI -g $RG | ConvertFrom-Json).instrumentationKey
+
+#構成情報取得
+az webapp config appsettings list --name $WebAPP --resource-group $RG --subscription subscription_sugaya
+#共通設定追加
+az webapp config appsettings set -g $RG -n $WebAPP --settings APPINSIGHTS_INSTRUMENTATIONKEY=$key
+#関数
+az webapp config appsettings set -g $RG -n $WebAPP --settings ApplicationInsightsAgent_EXTENSION_VERSION="~3"
+#Webapp
+az webapp config appsettings set -g $RG -n $WebAPP --settings APPLICATIONINSIGHTS_ENABLE_AGENT="true"
+#実行結果確認
+az webapp config appsettings list --name $WebAPP --resource-group $RG --subscription subscription_sugaya
+
+
+az monitor app-insights component connect-function -g $RG -a $WebAPPAI --function $WebAPP
+
+az monitor app-insights api-key show --app $WebAPPAI --resource-group $RG
