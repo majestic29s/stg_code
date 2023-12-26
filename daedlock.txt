@@ -1,0 +1,23 @@
+<dead lock を起こすサンプル クエリ>
+//SQL Server Management Studio (SSMS) 等にて、該当のデータベースに接続した上で以下クエリを実行ください。
+
+//事前にサンプル スキーマとサンプル テーブルを作成
+CREATE TABLE dbo.Product (ProductID int, Color varchar(20))
+CREATE TABLE dbo.Customer (CustomerID int, CustomerName varchar(20))
+INSERT INTO dbo.Product VALUES (680, 'Red')
+INSERT INTO dbo.Customer VALUES (1, 'John')
+ 
+//以下、各異なるセッションを開き、【1】から【6】の順番で実行いただけますと、【6】 の実行後にデッドロックエラーが発生します。
+//SessionA
+【1】begin tran -- トランザクションを開始1
+【2】UPDATE dbo.Product set Color = 'Black' WHERE ProductID = 680;
+【5】Delete From dbo.Customer WHERE CustomerID = 1;
+ 
+//SessionB (Session A とは異なるセッションで実行ください、SSMS の場合異なるクエリエディターのタブを開いて実行ください)
+【3】 begin tran -- トランザクションを開始2
+【4】Delete From dbo.Customer WHERE CustomerID = 1;
+【6】UPDATE dbo.Product set Color = 'Black' WHERE ProductID = 680;
+
+//後片付け
+Drop TABLE dbo.Product;
+Drop TABLE dbo.Customer;
