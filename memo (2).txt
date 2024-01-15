@@ -1,0 +1,14 @@
+$RG = 'test-bicep-rg2'
+$LAWname = 'dev-bicep-la01'
+$workspaceid = (get-AzOperationalInsightsWorkspace -ResourceGroupName $RG -Name $LAWname).CustomerId
+$query = @"
+    AzureDiagnostics
+    | where Category == 'SQLSecurityAuditEvents'
+    | project  TimeGenerated,Resource,LogicalServerName_s,succeeded_s,client_ip_s,application_name_s
+"@
+# Azure‚ÉÚ‘±‚·‚é
+Connect-AzAccount 
+
+# Log Analytics‚©‚ç•ªÍŒ‹‰Ê‚ğæ“¾
+$queryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId $workspaceid -Query $query
+$queryResults.Results | Export-CSV -Path out.csv -Encoding Default
