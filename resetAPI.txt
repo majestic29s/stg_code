@@ -1,0 +1,88 @@
+https://jpazasms.github.io/blog/AzureSubscriptionManagement/20181113a/
+
+1.対象のサブスクリプションIDを修正し、以下のコマンドを実行する
+Connect-AzAccount -tenant "＜テナント ID ＞" -Subscription "＜サブスクリプション ID ＞"
+
+
+2.SubscriptionID を取得する
+$subscriptionid = (Get-AzContext).Subscription.Id
+
+3.テナントIDを取得する。
+(Get-AzTenant).ID
+
+4.トークン取得
+
+$getaccess = Get-AzAccessToken
+
+5.Azure REST API を呼び出すための URL を作成する
+$url = "https://management.azure.com/subscriptions/" + $subscriptionId + "/providers/Microsoft.Consumption/usageDetails?api-version=2023-05-01"
+
+6.以下のコマンドを実行して、Azure REST API を呼び出すためメソッド、Bearerトークン、コンテンツタイプを指定する
+
+$method = "GET"
+$authHeader = "Bearer " + $getaccess.Token 
+$requestHeader = @{Authorization = $authHeader}
+$contenttype = "application/json"
+
+7.コマンド実行
+$response = Invoke-WebRequest -Uri $url -Method $method -Headers $requestHeader -ContentType $contenttype
+
+8.結果確認
+ConvertFrom-Json $response | ConvertTo-Json
+
+
+$url = "https://management.azure.com/providers/Microsoft.OperationalInsights/operations?api-version=2022-10-01"
+
+
+$url =  "https://management.azure.com/subscriptions/fea8c823-b666-4d47-bce5-afc7811af330/resourceGroups/test-bicep-rg2/providers/Microsoft.Storage/storageAccounts/devbicepurjaiw7j43ad202/blobServices/default/providers/Microsoft.Insights/metrics?timespan=2021-04-20T09:00:00.000Z/2021-04-20T14:00:00.000Z&interval=PT6H&metricnames=BlobCount,BlobCapacity&aggregation=average,minimum,maximum&top=5&orderby=average asc&$filter=Tier eq '*'&api-version=2021-05-01&metricnamespace=Microsoft.Storage/storageAccounts/blobServices&AutoAdjustTimegrain=True&ValidateDimensions=False"
+
+
+
+$rul = "https://management.azure.com/fea8c823-b666-4d47-bce5-afc7811af330/providers/Microsoft.Insights/metrics?api-version=2021-05-01"
+
+
+
+------------------
+Connect-AzAccount
+Set-AzContext -SubscriptionID "サブスクリプションID"
+
+$Sub = (Get-AzContext).Subscription.Id
+
+
+$Token = (Get-AzAccessToken).Token
+$AuthHeader = "Bearer " + $Token
+$ReqHeader = @{"Authorization" = $AuthHeader; "Accept" = "application/json"}
+$ContType = "application/json"
+
+$AIs = Get-AzApplicationInsights
+foreach($AI in $AIs){
+ $AIName = $AI.Name
+ $AIRG = $AI.ResourceGroupName
+ $Uri = "https://management.azure.com/subscriptions/" + $Sub + "/resourcegroups/" + $AIRG + "/providers/microsoft.insights/components/" + $AIName + "?api-version=2018-05-01-preview"
+ $ReqResult = Invoke-WebRequest -Uri $Uri -Headers $ReqHeader -Method GET -ContentType $ContType
+ $Cont = $ReqResult.Content | ConvertFrom-Json
+ $Workspace = $Cont.properties.WorkspaceResourceId
+ Write-Output("`nAI Name:" + $AI.Name)
+ Write-Output("Workspace Id:" + $Workspace)
+ Write-Output("StatusCode :" + $ReqResult.StatusCode)
+ $Workspace = $null
+}
+
+
+-------------------
+$AIs = Get-AzOperationalInsightsWorkspace
+
+foreach($AI in $AIs){
+ $AIName = $AI.Name
+ $AIRG = $AI.ResourceGroupName
+ $Uri = "https://management.azure.com/subscriptions/" + $Sub + "/resourcegroups/" + $AIRG + "/providers/Microsoft.OperationalInsights/workspaces/" + $AIName + "?api-version=2022-10-01"
+ $ReqResult = Invoke-WebRequest -Uri $Uri -Headers $ReqHeader -Method GET -ContentType $ContType
+ $Cont = $ReqResult.Content | ConvertFrom-Json
+ Write-Output("`nAI Name:" + $AI.Name)
+ Write-Output("properties:" + $Cont)
+ Write-Output("StatusCode :" + $ReqResult.StatusCode)
+ $Workspace = $null
+}
+
+
+
