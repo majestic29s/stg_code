@@ -1,0 +1,29 @@
+# 各種パラメーター (要変更)
+$ResourceGroupName = "RG-Name"
+$StorageName = "StrName"
+$LogPath = "C:\Users\UserName\Desktop\NsgFlowLog\"    # 作成済みのフォルダを指定、末尾に \ が必要
+$ResultPath = "C:\Users\UserName\Desktop\NsgFlowLog\"     # 同上
+ 
+# Azure Storage へのアクセス用の認証情報を取得
+$StorageAccount = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName
+$Context = $StorageAccount.Context
+ 
+# Blob から NSG フロー ログをダウンロード
+Get-AzStorageBlob -Container "insights-logs-networksecuritygroupflowevent" -Context $Context | Get-AzStorageBlobContent -Destination $LogPath
+ 
+# ファイル一覧を取得
+$FileList = Get-ChildItem -Path $LogPath -include *.json -Recurse -Force
+ 
+# NSG フローログから flowTuples のみを抽出
+$Records = @("Time Stamp,Source IP,Destination IP,Source Port,Destination Port,Protocol,Traffic Flow,Traffic Decision,Flow State,Packets - Source to destination,Bytes sent - Source to destination,Packets - Destination to source,Bytes sent - Destination to source")
+$Records += $FileList | foreach {(Get-Content -Path $_.FullName | ConvertFrom-Json).records.properties.flows.flows.flowtuples}
+ 
+# 全てのレコードを抽出して CSV ファイルを生成
+$Records | Out-File "$ResultPath\AllRecords.csv" -Encoding utf8
+ 
+# 特定の条件を満たすレコードを抽出して CSV ファイルを生成 ("O,D" すなわち Outbound で Deny されたものだけ抽出する場合)
+$Records | Select-String "O,D" | Out-File "$ResultPath\FilteredRecords.csv" -Encoding utf8
+ 
+# 特定の条件を満たすレコードを抽出して画面表示
+$CSV = ($Records | ConvertFrom-Csv)
+$CSV | where {$_."Destination Port" -eq 443 -and $_."Traffic Flow" -eq "O"} | Format-Table
