@@ -1,0 +1,56 @@
+@rem メイン
+@echo OFF
+@set work=list.txt
+@set work2=list2.txt
+@echo ☆☆☆使用方法☆☆☆
+@echo ③②実行後、対象を絞りたい場合、キーワード除外を実行する。
+@echo 例：②で「MM」を検索し、「yyyy:mm:dd」を含む列を除外したい場合など
+@echo 【注意事項】
+@echo 　・スペースを含む文字列は検索不可
+@echo 　・キーワードは大文字小文字の区別はしない。
+:main
+@set CONFIRM_STR=""
+
+@echo □□□□□□メニュー画面□□□□□□
+@echo １　カタログ作成
+@echo ２　キーワード検索
+@echo ３　キーワード除外
+@echo ４　置換
+@echo ５　ある各上司のファイルのみカタログ作成
+@echo 1,2,3,4,5から選択。下記に入力し「Enter」を押下する。
+@echo □□□□□□□□□□□□□□□□□□
+
+@set /p CONFIRM_STR=""
+@if /i "%CONFIRM_STR%" EQU "1" goto katarogu
+@if /i "%CONFIRM_STR%" EQU "2" goto check1
+@echo キャンセルします。
+exit /b 0
+
+@1 カタログ作成
+:katarogu
+@echo 対象のディレクトリを入力してください。
+@set /p path2=""
+@if not exist %path2% goto error
+@if exist %work% del %work%
+for /R "%path2%" %%i in (*) do (@echo "%%i", >>%work%)
+goto main
+
+@rem 2　キーワード検索
+:check1
+@if exist %work3% del %work3%
+@if exist %work2% del %work2%
+
+@echo 検索キーワードを入力してください。
+@set /p TARGET=""
+for /F "delims=," %%t in (%work%) do @findstr /P /I "%target%" %%t && echo %%t, >>%work3%
+@if not exist %work3% echo %target%は見つかりませんでした。 & goto main
+for /F "delims=," %%t in (%work3%) do @find /I "%target%" %%t >>%work2%
+%work2%
+goto main
+
+
+@rem エラーメッセージ
+:error
+echo %path2%が存在しません。確認してください。
+pause
+goto main
