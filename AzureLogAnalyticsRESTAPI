@@ -1,0 +1,47 @@
+
+https://qiita.com/y447093040/items/07ec223d0e7c1eb3b777
+
+#パラメータ設定
+$tenantId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$clientId       = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"      
+$clientSecret   = "********************************"  
+
+$subscriptionId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$workspaceRgName="DefaultResourceGroup-EUS"
+$workspacename = "DefaultWorkspace-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx-EUS"
+
+#Tokenの取得
+$loginURL       = "https://login.microsoftonline.com/$tenantId/oauth2/token"
+$resource       = "https://management.azure.com/"         
+$body           = @{grant_type="client_credentials";resource=$resource;client_id=$clientId;client_secret=$clientSecret}
+$oauth          = Invoke-RestMethod -Method Post -Uri $loginURL -Body $body
+$headerParams = @{"Authorization" = "Bearer " + $oauth.access_token} 
+
+#検索クエリ
+$body = @{query = 
+'let startdatetime=datetime(2019-12-01T00:00:00);
+let enddatetime=datetime(2019-12-30T23:59:59);
+Heartbeat | where TimeGenerated between(startdatetime .. enddatetime)
+'
+}| ConvertTo-Json
+
+#APIの呼び出し(検索クエリの実行)
+$url="https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$workspaceRgName/providers/Microsoft.OperationalInsights/workspaces/$workspacename/api/query?api-version=2017-01-01-preview"
+$result = Invoke-RestMethod -UseBasicParsing -Headers $headerParams -Uri $url -Method Post -Body $body -ContentType "application/json"
+
+#検索クエリ結果の整形
+$headerRow = $null
+$headerRow = $result.tables[0].columns | Select-Object ColumnName
+$columnsCount = $headerRow.Count
+$logData = @()
+foreach ($row in $result.tables[0].rows) {
+    $data = new-object PSObject
+    for ($i = 0; $i -lt $columnsCount; $i++) {
+        $data | add-member -membertype NoteProperty -name $headerRow[$i].ColumnName -value $row[$i]
+    }
+    $logData += $data
+    $data = $null
+}
+
+#CSV出力
+$logData | export-csv C:\Users\XXXXXX\Desktop\logAnalytics.csv -NoTypeInformation
