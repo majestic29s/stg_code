@@ -1,0 +1,197 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: VPC and Subnet Create
+
+Metadata:
+  "AWS::CloudFormation::Interface":
+    ParameterGroups:
+      - Label:
+          default: "Project Name Prefix"
+        Parameters:
+          - Env
+          - Prefix
+      - Label:
+          default: "Network Configuration"
+        Parameters:
+          - region
+
+    ParameterLabels:
+      region:
+        default: "region name"
+
+# ------------------------------------------------------------#
+# Input Parameters
+# ------------------------------------------------------------#
+Parameters:
+  Env:
+    Type: String
+    AllowedValues: ["dev", "pre", "prod"]
+    Default: "dev"
+
+  Prefix:
+    Type: String
+    Default: "tlsf"
+
+  region:
+    Type: String
+    Default: "ap-northeast-1"
+
+  MyIP:
+    Type: String
+    Default: 153.242.179.0/32
+    #    Default: 133.158.0.0/16
+
+  amiidweb:
+    Type: String
+    Default: "ami-0fa5e66a1cc2e0aa1" #Windows2022 ami-01d033a4281b702a8
+
+  KeyName:
+    Description: The EC2 Key Pair to allow SSH access to the instance
+    Type: "AWS::EC2::KeyPair::KeyName"
+    Default: "ap-northeast-1"
+
+Resources:
+  # ------------------------------------------------------------#
+  #  VPC
+  # ------------------------------------------------------------#
+  # VPC Create
+  VPC:
+    Type: "AWS::EC2::VPC"
+    Properties:
+      CidrBlock: "10.0.0.0/16"
+      EnableDnsSupport: "true"
+      EnableDnsHostnames: "true"
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: !Sub "${Env}-${Prefix}-vpc"
+
+  # InternetGateway Create
+  InternetGateway:
+    Type: "AWS::EC2::InternetGateway"
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub "${Env}-${Prefix}-igw"
+
+  # IGW Attach
+  InternetGatewayAttachment:
+    Type: "AWS::EC2::VPCGatewayAttachment"
+    Properties:
+      InternetGatewayId: !Ref InternetGateway
+      VpcId: !Ref VPC
+
+  # ------------------------------------------------------------#
+  #  Subnet
+  # ------------------------------------------------------------#
+  # Public SubnetA Create
+  PublicSubnetA:
+    Type: "AWS::EC2::Subnet"
+    Properties:
+      AvailabilityZone: !Sub "${region}a"
+      CidrBlock: "10.0.10.0/24"
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${Env}-${Prefix}-public-subnet-a"
+
+  # ------------------------------------------------------------#
+  #  RouteTable
+  # ------------------------------------------------------------#
+  # Public RouteTableA Create
+  PublicRouteTableA:
+    Type: "AWS::EC2::RouteTable"
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${Env}-${Prefix}-public-route-a"
+
+  # ------------------------------------------------------------#
+  # Routing
+  # ------------------------------------------------------------#
+  # PublicRouteA Create
+  PublicRouteA:
+    Type: "AWS::EC2::Route"
+    Properties:
+      RouteTableId: !Ref PublicRouteTableA
+      DestinationCidrBlock: "0.0.0.0/0"
+      GatewayId: !Ref InternetGateway
+
+  # ------------------------------------------------------------#
+  # RouteTable Associate
+  # サブネットをルートテーブルに関連付けます。
+  # ------------------------------------------------------------#
+  # PublicRouteTable Associate SubnetA
+  PublicSubnetARouteTableAssociation:
+    Type: "AWS::EC2::SubnetRouteTableAssociation"
+    Properties:
+      SubnetId: !Ref PublicSubnetA
+      RouteTableId: !Ref PublicRouteTableA
+
+  # メンテナンスサーバのセキュリティグループ
+  EC2SecurityGroupWork:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub "${Env}-${Prefix}-sg-work"
+      GroupDescription: !Sub "${Env}-${Prefix}-sg-work"
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        # RDP
+        - IpProtocol: tcp
+          FromPort: 3389
+          ToPort: 3389
+          CidrIp: !Ref MyIP
+
+  # ------------------------------------------------------------#
+  # EC2 踏み台サーバ
+  # ------------------------------------------------------------#
+  EC2Work:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref amiidweb
+      KeyName: !Ref KeyName
+      InstanceType: t2.micro #t3.large
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true" #PublicIPAddress add
+          DeviceIndex: "0"
+          SubnetId: !Ref PublicSubnetA
+          GroupSet:
+            - !Ref EC2SecurityGroupWork
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 100 # ディスク容量を100GBに設定
+      UserData: !Base64 |
+        <powershell>
+        msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
+        </powershell>
+      Tags:
+        - Key: Name
+          Value: !Sub "${Env}-${Prefix}-ec2-work"
+
+# ------------------------------------------------------------#
+# Output Parameters
+# ------------------------------------------------------------#
+Outputs:
+  # VPC
+  VPC:
+    Value: !Ref VPC
+    Export:
+      Name: !Sub "${Env}-${Prefix}-vpc"
+
+  # Subnet
+  PublicSubnetA:
+    Value: !Ref PublicSubnetA
+    Export:
+      Name: !Sub "${Env}-${Prefix}-public-subnet-a"
+
+  # Route
+  PublicRouteTableA:
+    Value: !Ref PublicRouteTableA
+    Export:
+      Name: !Sub "${Env}-${Prefix}-public-route-a"
+
+  EC2SecurityGroupWork:
+    Value: !Ref EC2SecurityGroupWork
+    Export:
+      Name: !Sub "${Env}-${Prefix}-sg-work"
