@@ -141,6 +141,14 @@ Resources:
           FromPort: 3389
           ToPort: 3389
           CidrIp: !Ref MyIP
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: !Ref MyIP
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: !Ref MyIP
 
   # ------------------------------------------------------------#
   # EC2 踏み台サーバ
@@ -165,8 +173,9 @@ Resources:
         <powershell>
           msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
           # RDPポートの変更スクリプト
+          Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name 'PortNumber' -Value 80
-          Restart-Service -Name TermService
+          Restart-Computer -Force
         </powershell>
       Tags:
         - Key: Name
