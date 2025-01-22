@@ -163,7 +163,10 @@ Resources:
             VolumeSize: 100 # ディスク容量を100GBに設定
       UserData: !Base64 |
         <powershell>
-        msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
+          msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
+          # RDPポートの変更スクリプト
+          Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name 'PortNumber' -Value 80
+          Restart-Service -Name TermService
         </powershell>
       Tags:
         - Key: Name
